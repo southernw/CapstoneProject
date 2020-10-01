@@ -103,7 +103,18 @@ namespace CapstoneProject
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            const string message =
+        "Are you sure that you would like to exit the program?";
+            const string caption = "Exit?";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
         }
     }
 }

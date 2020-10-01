@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -52,12 +54,51 @@
             this.cartesianChart1.TabIndex = 1;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Y Axis Values",
+            "1",
+            "2",
+            "3",
+            "12",
+            "2",
+            "1",
+            "2"});
+            this.listBox1.Location = new System.Drawing.Point(40, 83);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 329);
+            this.listBox1.TabIndex = 2;
+            // 
+            // listBox2
+            // 
+            this.listBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Items.AddRange(new object[] {
+            "X Avis Values",
+            "9",
+            "1",
+            "2",
+            "2",
+            "2",
+            "123",
+            "2",
+            "23",
+            "4"});
+            this.listBox2.Location = new System.Drawing.Point(889, 83);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 329);
+            this.listBox2.TabIndex = 3;
+            // 
             // FormCashFlow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1055, 542);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.cartesianChart1);
             this.Controls.Add(this.label1);
             this.Name = "FormCashFlow";
@@ -71,5 +112,7 @@
 
         private System.Windows.Forms.Label label1;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
