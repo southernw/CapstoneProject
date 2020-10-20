@@ -32,8 +32,8 @@ namespace CapstoneProject
                     PointGeometry = null
                 },
                 new LineSeries
-                {
-                    Title = "Series 2",
+                { 
+                    Title = "Series 2", 
                     Values = new ChartValues<double> {5, 2, 8, 3},
                     PointGeometry = DefaultGeometries.Square,
                     PointGeometrySize = 15
@@ -74,6 +74,11 @@ namespace CapstoneProject
         private void CartesianChart1OnDataClick(object sender, ChartPoint chartPoint)
         {
             MessageBox.Show("You clicked (" + chartPoint.X + "," + chartPoint.Y + ")");
+        }
+
+        private void FormCashFlow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

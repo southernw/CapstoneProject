@@ -103,6 +103,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCashFlow";
             this.Text = "FormCashFlow";
+            this.Load += new System.EventHandler(this.FormCashFlow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
