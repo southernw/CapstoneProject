@@ -70,56 +70,49 @@ namespace CapstoneProject
             double MMCF_PORFT = sqftAcre * swOne * bhpFif * recFacOne;
             return MMCF_PORFT;
         }
-
-        // Per Well Calculations
-        // D18
-        public double calcPerWellMMCF(double porosityFeet, double mmcfPorFt)
+        
+        // Per Well MMCF
+        //F12
+        public double calcPerWellMMCF(double porFeet, double MMCF_PORFT)
         {
             //Porosity Feet * MMCF/PorFeet
-            double mmcfPorFt2 = calcMMCF_PORFT(acres, sw, bhp, recFactor);
-            double perWellMMCF = porosityFeet / mmcfPorFt2;
+            double perWellMMCF = porFeet * MMCF_PORFT;
 
             return perWellMMCF;
         }
         //BO Per Well
         // C18
-        public double calcPerWellBO(double bblMillion, double MMCF) 
+        public double calcPerWellBO(double bblMillion, double MMCF, double perWellMMCF) 
         {
             // BBL / mil * MMCF
-            double mmcfPorFt2 = calcMMCF_PORFT(acres, sw, bhp, recFactor);
-            double porosityFeet = calcPorFeet(netH, avgPorosity);
-            double perWellMMCF = porosityFeet / mmcfPorFt2;
-
             double perWellBO = (bblMillion * perWellMMCF);
 
             return perWellBO;
         }
-
         // Total Reserves Calculations
         // D22
         public double calcTotalResMMCF(double perWellMMCF, double numWells)
         {
             // PerWellMMCF * numWells
-            double mmcfPorFt3 = calcMMCF_PORFT(acres, sw, bhp, recFactor);
-            double porosityFeet = calcPorFeet(netH, avgPorosity);
-            double perWellMMCF2 = porosityFeet / mmcfPorFt3;
-
-            double totalResMM = perWellMMCF2 * numWells;
+            double totalResMM = perWellMMCF * numWells;
 
             return totalResMM;
         }
-
         // Total Reserves BO
         // C22
         public double calcTotalResBO(double perWellBO, double numWells)
         {
             //PerWellBO * numWells
+
+            /*
             double mmcfPorFt2 = calcMMCF_PORFT(acres, sw, bhp, recFactor);
             double porosityFeet = calcPorFeet(netH, avgPorosity);
             double perWellMMCF = porosityFeet / mmcfPorFt2;
 
             double perWellBO2 = (bblMillion * perWellMMCF);
-            double totalResBO = perWellBO * perWellMMCF;
+
+            */
+            double totalResBO = perWellBO * numWells;
 
             return totalResBO;
         }
