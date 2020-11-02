@@ -29,7 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMMCF_PortFt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMWE = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPorFeet = new System.Windows.Forms.TextBox();
             this.txtTtlResMMCF = new System.Windows.Forms.TextBox();
             this.txtTtlResBO = new System.Windows.Forms.TextBox();
             this.txtResPerMMCF = new System.Windows.Forms.TextBox();
@@ -54,92 +63,157 @@
             this.txtAcres = new System.Windows.Forms.TextBox();
             this.txtRecFactor = new System.Windows.Forms.TextBox();
             this.txtNetH = new System.Windows.Forms.TextBox();
-            this.txtPorFeet = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMWE = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMMCF_PortFt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(62, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 505);
+            this.panel1.Size = new System.Drawing.Size(951, 505);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // label8
             // 
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txtMMCF_PortFt);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtMWE);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtPorFeet);
-            this.panel2.Controls.Add(this.txtTtlResMMCF);
-            this.panel2.Controls.Add(this.txtTtlResBO);
-            this.panel2.Controls.Add(this.txtResPerMMCF);
-            this.panel2.Controls.Add(this.txtResPerBO);
-            this.panel2.Location = new System.Drawing.Point(579, 16);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 424);
-            this.panel2.TabIndex = 14;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(174, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(188, 24);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Total Reserve MMCF";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(4, 98);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 24);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Total Reserve BO";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 24);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Per Well BO";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(209, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 24);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Per Well MMCF";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(106, 234);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 24);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "MMCF / Por Ft";
+            // 
+            // txtMMCF_PortFt
+            // 
+            this.txtMMCF_PortFt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMMCF_PortFt.Location = new System.Drawing.Point(64, 261);
+            this.txtMMCF_PortFt.Name = "txtMMCF_PortFt";
+            this.txtMMCF_PortFt.Size = new System.Drawing.Size(215, 26);
+            this.txtMMCF_PortFt.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(174, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 24);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Mud Weight Est.";
+            // 
+            // txtMWE
+            // 
+            this.txtMWE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMWE.Location = new System.Drawing.Point(178, 194);
+            this.txtMWE.Name = "txtMWE";
+            this.txtMWE.Size = new System.Drawing.Size(174, 26);
+            this.txtMWE.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 24);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Porosity Feet";
+            // 
+            // txtPorFeet
+            // 
+            this.txtPorFeet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPorFeet.Location = new System.Drawing.Point(6, 194);
+            this.txtPorFeet.Name = "txtPorFeet";
+            this.txtPorFeet.Size = new System.Drawing.Size(148, 26);
+            this.txtPorFeet.TabIndex = 17;
             // 
             // txtTtlResMMCF
             // 
             this.txtTtlResMMCF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTtlResMMCF.Location = new System.Drawing.Point(144, 121);
+            this.txtTtlResMMCF.Location = new System.Drawing.Point(178, 125);
             this.txtTtlResMMCF.Name = "txtTtlResMMCF";
-            this.txtTtlResMMCF.Size = new System.Drawing.Size(148, 26);
+            this.txtTtlResMMCF.Size = new System.Drawing.Size(174, 26);
             this.txtTtlResMMCF.TabIndex = 16;
             // 
             // txtTtlResBO
             // 
             this.txtTtlResBO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTtlResBO.Location = new System.Drawing.Point(28, 121);
+            this.txtTtlResBO.Location = new System.Drawing.Point(6, 125);
             this.txtTtlResBO.Name = "txtTtlResBO";
-            this.txtTtlResBO.Size = new System.Drawing.Size(110, 26);
+            this.txtTtlResBO.Size = new System.Drawing.Size(148, 26);
             this.txtTtlResBO.TabIndex = 15;
             // 
             // txtResPerMMCF
             // 
             this.txtResPerMMCF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResPerMMCF.Location = new System.Drawing.Point(144, 61);
+            this.txtResPerMMCF.Location = new System.Drawing.Point(178, 56);
             this.txtResPerMMCF.Name = "txtResPerMMCF";
-            this.txtResPerMMCF.Size = new System.Drawing.Size(148, 26);
+            this.txtResPerMMCF.Size = new System.Drawing.Size(174, 26);
             this.txtResPerMMCF.TabIndex = 14;
             // 
             // txtResPerBO
             // 
             this.txtResPerBO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResPerBO.Location = new System.Drawing.Point(28, 61);
+            this.txtResPerBO.Location = new System.Drawing.Point(6, 56);
             this.txtResPerBO.Name = "txtResPerBO";
-            this.txtResPerBO.Size = new System.Drawing.Size(110, 26);
+            this.txtResPerBO.Size = new System.Drawing.Size(148, 26);
             this.txtResPerBO.TabIndex = 13;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button1.Location = new System.Drawing.Point(21, 446);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 37);
+            this.button1.Size = new System.Drawing.Size(178, 40);
             this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Calculate";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
@@ -333,92 +407,29 @@
             this.txtNetH.TabIndex = 5;
             this.txtNetH.Text = "26.00";
             // 
-            // txtPorFeet
+            // groupBox2
             // 
-            this.txtPorFeet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPorFeet.Location = new System.Drawing.Point(18, 269);
-            this.txtPorFeet.Name = "txtPorFeet";
-            this.txtPorFeet.Size = new System.Drawing.Size(110, 26);
-            this.txtPorFeet.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 253);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Porosity Feet";
-            // 
-            // txtMWE
-            // 
-            this.txtMWE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMWE.Location = new System.Drawing.Point(175, 330);
-            this.txtMWE.Name = "txtMWE";
-            this.txtMWE.Size = new System.Drawing.Size(110, 26);
-            this.txtMWE.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(199, 311);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Mud Weight Est.";
-            // 
-            // txtMMCF_PortFt
-            // 
-            this.txtMMCF_PortFt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMMCF_PortFt.Location = new System.Drawing.Point(18, 330);
-            this.txtMMCF_PortFt.Name = "txtMMCF_PortFt";
-            this.txtMMCF_PortFt.Size = new System.Drawing.Size(110, 26);
-            this.txtMMCF_PortFt.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 311);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 13);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "MMCF / Por Ft";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(211, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Per Well MMCF";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Per Well BO";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Total Reserve BO";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(199, 105);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 13);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Total Reserve MMCF";
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.txtMWE);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txtResPerBO);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtResPerMMCF);
+            this.groupBox2.Controls.Add(this.txtPorFeet);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtMMCF_PortFt);
+            this.groupBox2.Controls.Add(this.txtTtlResBO);
+            this.groupBox2.Controls.Add(this.txtTtlResMMCF);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(568, 23);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(368, 417);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Reults";
             // 
             // FormGas
             // 
@@ -430,10 +441,10 @@
             this.Name = "FormGas";
             this.Text = "FormGas";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -461,7 +472,6 @@
         private System.Windows.Forms.Label lblBblMillion;
         private System.Windows.Forms.TextBox txtAvgPor;
         private System.Windows.Forms.Label lblAvgPoros;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtTtlResMMCF;
         private System.Windows.Forms.TextBox txtTtlResBO;
         private System.Windows.Forms.TextBox txtResPerMMCF;
@@ -476,5 +486,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

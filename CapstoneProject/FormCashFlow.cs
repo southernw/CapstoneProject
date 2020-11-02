@@ -78,6 +78,40 @@ namespace CapstoneProject
 
         private void FormCashFlow_Load(object sender, EventArgs e)
         {
+            CashFlow cash = new CashFlow();
+            cash.modf(dataGridView1);
+        }
+
+        private void cartesianChart1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            CashFlow cash = new CashFlow();
+
+            //double cashFlow = cash.gas_rate(8);
+            //textBox1.Text = cashFlow.ToString();
+
+            int months = 119;
+
+            cash.addRows(dataGridView1, months);
+            cash.addGasPrice(dataGridView1, months);
+            cash.addMonth(dataGridView1, months);
+            cash.addGasRate(dataGridView1, months);
+            //double gasPrice = cash.gas_price(8);
+           // textBox2.Text = gasPrice.ToString();
+
+            //double[] data = new double[100] = cash.gas_price(8);
+
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

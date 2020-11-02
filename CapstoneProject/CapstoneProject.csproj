@@ -63,6 +63,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashFlow.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
