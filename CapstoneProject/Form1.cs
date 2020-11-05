@@ -21,8 +21,10 @@ namespace CapstoneProject
         public MainForm()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(1650, 800);
+            //this.MaximumSize = new Size(1650, 800);
             leftBoderButton = new Panel();
-            leftBoderButton.Size = new Size(10, 60);
+            //leftBoderButton.Size = new Size(10, 60);
             panelMenu.Controls.Add(leftBoderButton);
 
             this.Text = String.Empty;

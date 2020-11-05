@@ -17,6 +17,12 @@ namespace CapstoneProject
             InitializeComponent();
         }
 
+
+
+        private void txtBHP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             GasCalculation gas = new GasCalculation(double.Parse(txtBHP.Text), double.Parse(txtSW.Text), double.Parse(txtRecFactor.Text),
