@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace CapstoneProject
@@ -34,6 +35,8 @@ namespace CapstoneProject
         //Gas Rate MMCF/Month ***************************************************************************************************************
         // Gas_rate = calculated value
         // A_PARAM * EXP(B_PARAM * n)
+
+       
         public void addGasRate(DataGridView d1, int month)
         {
             double gasRate;
@@ -84,7 +87,7 @@ namespace CapstoneProject
             d1.Columns["Gross_Rev"].DefaultCellStyle.Format = "0.00";
             d1.Columns["Net_Rev"].HeaderText = "Net Revenue";
             d1.Columns["Net_Rev"].DefaultCellStyle.Format = "0.00";
-            d1.Columns["Sum_NetRev"].HeaderText = "Sum Net Revenue";
+            d1.Columns["Sum_NetRev"].HeaderText = "Sum of Net Revenue";
             d1.Columns["Sum_NetRev"].DefaultCellStyle.Format = "0.00";
 
         }

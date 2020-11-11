@@ -72,10 +72,10 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnExit.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.IconSize = 32;
+            this.btnExit.IconSize = 35;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.Location = new System.Drawing.Point(0, 357);
             this.btnExit.Name = "btnExit";
@@ -96,10 +96,10 @@
             this.btnCashFlow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCashFlow.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCashFlow.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCashFlow.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCashFlow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.btnCashFlow.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
             this.btnCashFlow.IconColor = System.Drawing.Color.White;
-            this.btnCashFlow.IconSize = 32;
+            this.btnCashFlow.IconSize = 35;
             this.btnCashFlow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCashFlow.Location = new System.Drawing.Point(0, 297);
             this.btnCashFlow.Name = "btnCashFlow";
@@ -120,10 +120,10 @@
             this.btnGas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnGas.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.btnGas.IconChar = FontAwesome.Sharp.IconChar.GasPump;
             this.btnGas.IconColor = System.Drawing.Color.White;
-            this.btnGas.IconSize = 32;
+            this.btnGas.IconSize = 35;
             this.btnGas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGas.Location = new System.Drawing.Point(0, 237);
             this.btnGas.Name = "btnGas";
@@ -144,10 +144,10 @@
             this.btnOil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnOil.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.btnOil.IconChar = FontAwesome.Sharp.IconChar.OilCan;
             this.btnOil.IconColor = System.Drawing.Color.White;
-            this.btnOil.IconSize = 32;
+            this.btnOil.IconSize = 35;
             this.btnOil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOil.Location = new System.Drawing.Point(0, 177);
             this.btnOil.Name = "btnOil";
@@ -168,10 +168,10 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnHome.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnHome.IconColor = System.Drawing.Color.White;
-            this.btnHome.IconSize = 32;
+            this.btnHome.IconSize = 35;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 117);
             this.btnHome.Name = "btnHome";
@@ -228,6 +228,7 @@
             // 
             // panelDesktop
             // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -243,10 +244,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(340, 227);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(443, 25);
+            this.label2.Size = new System.Drawing.Size(602, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "*To get started, choose an option from the menu";
             // 
@@ -256,10 +257,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(340, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 25);
+            this.label1.Size = new System.Drawing.Size(542, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to the Single Well Evaluation Tool";
             // 
@@ -273,6 +274,7 @@
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelMenu);
             this.Name = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

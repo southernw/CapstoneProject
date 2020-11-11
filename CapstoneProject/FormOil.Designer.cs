@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtThickness = new System.Windows.Forms.TextBox();
             this.txtPorosity = new System.Windows.Forms.TextBox();
             this.txtWaterSat = new System.Windows.Forms.TextBox();
             this.txtArea = new System.Windows.Forms.TextBox();
             this.txtRecFactor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,83 +55,88 @@
             this.lblPorosity = new System.Windows.Forms.Label();
             this.lblThickness = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtThickness
             // 
-            this.txtThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThickness.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtThickness.Location = new System.Drawing.Point(40, 61);
             this.txtThickness.Name = "txtThickness";
-            this.txtThickness.Size = new System.Drawing.Size(204, 26);
+            this.txtThickness.Size = new System.Drawing.Size(204, 30);
             this.txtThickness.TabIndex = 1;
+            this.txtThickness.Text = "15";
             // 
             // txtPorosity
             // 
-            this.txtPorosity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPorosity.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtPorosity.Location = new System.Drawing.Point(40, 121);
             this.txtPorosity.Name = "txtPorosity";
-            this.txtPorosity.Size = new System.Drawing.Size(204, 26);
+            this.txtPorosity.Size = new System.Drawing.Size(204, 30);
             this.txtPorosity.TabIndex = 2;
+            this.txtPorosity.Text = "20";
             // 
             // txtWaterSat
             // 
-            this.txtWaterSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWaterSat.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtWaterSat.Location = new System.Drawing.Point(40, 186);
             this.txtWaterSat.Name = "txtWaterSat";
-            this.txtWaterSat.Size = new System.Drawing.Size(204, 26);
+            this.txtWaterSat.Size = new System.Drawing.Size(204, 30);
             this.txtWaterSat.TabIndex = 3;
+            this.txtWaterSat.Text = "45";
             // 
             // txtArea
             // 
-            this.txtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArea.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtArea.Location = new System.Drawing.Point(40, 257);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(204, 26);
+            this.txtArea.Size = new System.Drawing.Size(204, 30);
             this.txtArea.TabIndex = 4;
+            this.txtArea.Text = "120";
+            this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
             // 
             // txtRecFactor
             // 
-            this.txtRecFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecFactor.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtRecFactor.Location = new System.Drawing.Point(40, 330);
             this.txtRecFactor.Name = "txtRecFactor";
-            this.txtRecFactor.Size = new System.Drawing.Size(204, 26);
+            this.txtRecFactor.Size = new System.Drawing.Size(204, 30);
             this.txtRecFactor.TabIndex = 5;
+            this.txtRecFactor.Text = "35";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(297, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 799);
+            this.panel1.Size = new System.Drawing.Size(1249, 717);
             this.panel1.TabIndex = 6;
             // 
-            // comboBox1
+            // button2
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Menu",
-            "Load Inputs",
-            "Save Inputs",
-            "Save Results",
-            "Print Results"});
-            this.comboBox1.Location = new System.Drawing.Point(42, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.Text = "Menu";
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
+            this.button2.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.button2.Location = new System.Drawing.Point(693, 582);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 40);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Save Results";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(237)))), ((int)(((byte)(226)))));
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -142,9 +148,9 @@
             this.groupBox2.Controls.Add(this.txtResBoAcrFt);
             this.groupBox2.Controls.Add(this.txtResRecov);
             this.groupBox2.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.groupBox2.Location = new System.Drawing.Point(776, 70);
+            this.groupBox2.Location = new System.Drawing.Point(693, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(370, 424);
+            this.groupBox2.Size = new System.Drawing.Size(574, 560);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results";
@@ -196,10 +202,10 @@
             // 
             // txtResPorFeet
             // 
-            this.txtResPorFeet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResPorFeet.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtResPorFeet.Location = new System.Drawing.Point(36, 61);
             this.txtResPorFeet.Name = "txtResPorFeet";
-            this.txtResPorFeet.Size = new System.Drawing.Size(193, 29);
+            this.txtResPorFeet.Size = new System.Drawing.Size(193, 30);
             this.txtResPorFeet.TabIndex = 7;
             // 
             // txtResBblAcre
@@ -232,18 +238,20 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.btnClear.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.btnClear.Location = new System.Drawing.Point(328, 523);
+            this.btnClear.Location = new System.Drawing.Point(164, 582);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(137, 40);
             this.btnClear.TabIndex = 13;
             this.btnClear.Text = "Clear Inputs";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(237)))), ((int)(((byte)(226)))));
             this.groupBox1.Controls.Add(this.lblRecRactor);
             this.groupBox1.Controls.Add(this.lblArea);
             this.groupBox1.Controls.Add(this.lblWaterSat);
@@ -255,9 +263,9 @@
             this.groupBox1.Controls.Add(this.txtArea);
             this.groupBox1.Controls.Add(this.txtRecFactor);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.groupBox1.Location = new System.Drawing.Point(134, 70);
+            this.groupBox1.Location = new System.Drawing.Point(21, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 424);
+            this.groupBox1.Size = new System.Drawing.Size(574, 560);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inputs";
@@ -267,51 +275,52 @@
             this.lblRecRactor.AutoSize = true;
             this.lblRecRactor.Location = new System.Drawing.Point(37, 303);
             this.lblRecRactor.Name = "lblRecRactor";
-            this.lblRecRactor.Size = new System.Drawing.Size(145, 22);
+            this.lblRecRactor.Size = new System.Drawing.Size(180, 22);
             this.lblRecRactor.TabIndex = 10;
-            this.lblRecRactor.Text = "Recovery Factor:";
+            this.lblRecRactor.Text = "Recovery Factor (%):";
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.Location = new System.Drawing.Point(37, 230);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(53, 22);
+            this.lblArea.Size = new System.Drawing.Size(113, 22);
             this.lblArea.TabIndex = 9;
-            this.lblArea.Text = "Area:";
+            this.lblArea.Text = "Area (acres):";
             // 
             // lblWaterSat
             // 
             this.lblWaterSat.AutoSize = true;
             this.lblWaterSat.Location = new System.Drawing.Point(36, 159);
             this.lblWaterSat.Name = "lblWaterSat";
-            this.lblWaterSat.Size = new System.Drawing.Size(152, 22);
+            this.lblWaterSat.Size = new System.Drawing.Size(187, 22);
             this.lblWaterSat.TabIndex = 8;
-            this.lblWaterSat.Text = "Water Saturation:";
+            this.lblWaterSat.Text = "Water Saturation (%):";
             // 
             // lblPorosity
             // 
             this.lblPorosity.AutoSize = true;
             this.lblPorosity.Location = new System.Drawing.Point(37, 94);
             this.lblPorosity.Name = "lblPorosity";
-            this.lblPorosity.Size = new System.Drawing.Size(83, 22);
+            this.lblPorosity.Size = new System.Drawing.Size(118, 22);
             this.lblPorosity.TabIndex = 7;
-            this.lblPorosity.Text = "Porosity:";
+            this.lblPorosity.Text = "Porosity (%):";
             // 
             // lblThickness
             // 
             this.lblThickness.AutoSize = true;
             this.lblThickness.Location = new System.Drawing.Point(36, 35);
             this.lblThickness.Name = "lblThickness";
-            this.lblThickness.Size = new System.Drawing.Size(95, 22);
+            this.lblThickness.Size = new System.Drawing.Size(125, 22);
             this.lblThickness.TabIndex = 6;
-            this.lblThickness.Text = "Thickness:";
+            this.lblThickness.Text = "Thickness (ft):";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.button1.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.button1.Location = new System.Drawing.Point(134, 523);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(21, 582);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 40);
             this.button1.TabIndex = 6;
@@ -319,12 +328,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormOil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1344, 729);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
+            this.ClientSize = new System.Drawing.Size(1572, 845);
             this.Controls.Add(this.panel1);
             this.Name = "FormOil";
             this.Text = "FormOil";
@@ -334,6 +347,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -364,6 +378,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button2;
     }
 }
