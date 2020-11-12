@@ -13,6 +13,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Media;
 using LiveCharts;
 using LiveCharts.Wpf;
+using System.IO;
 
 namespace CapstoneProject
 {
@@ -29,6 +30,7 @@ namespace CapstoneProject
         private void FormCashFlow_Load(object sender, EventArgs e)
          {
             button2.Enabled = false;
+            button3.Enabled = false;
             CashFlow cash = new CashFlow();
             cash.modf(dataGridView1);
             
@@ -119,7 +121,8 @@ namespace CapstoneProject
 
                     //double[] data = new double[100] = cash.gas_price(8);
                     button2.Enabled = true;
-                }
+                    button3.Enabled = true;
+            }
                 catch (Exception ex)
                 {
 
@@ -150,9 +153,36 @@ namespace CapstoneProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormCashFlowChart form2 = new FormCashFlowChart();
-                    
-            form2.Show(); 
+            FormCashFlowChart form2 = new FormCashFlowChart(dataGridView1);
+            form2.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+                saveFileDialog1.Filter = "CSV Files (*.csv)|*.csv|Text Files (*.txt)|*.txt";
+                saveFileDialog1.Title = "Export Table Data";
+                saveFileDialog1.RestoreDirectory = true;
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+                    dataGridView1.SelectAll();
+                    DataObject dataObject = dataGridView1.GetClipboardContent();
+                    File.WriteAllText(saveFileDialog1.FileName, dataObject.GetText(TextDataFormat.CommaSeparatedValue));
+                    dataGridView1.ClearSelection();
+                }
+            }
+            catch (IOException ex)
+            {
+
+            }
         }
     }
 }

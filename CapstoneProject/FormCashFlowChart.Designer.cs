@@ -35,18 +35,18 @@
             // 
             // cartesianChart1
             // 
-            this.cartesianChart1.Location = new System.Drawing.Point(578, 30);
+            this.cartesianChart1.Location = new System.Drawing.Point(196, 49);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1090, 561);
+            this.cartesianChart1.Size = new System.Drawing.Size(1391, 797);
             this.cartesianChart1.TabIndex = 0;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(95, 704);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 978);
+            this.dataGridView1.Size = new System.Drawing.Size(126, 304);
             this.dataGridView1.TabIndex = 2;
             // 
             // FormCashFlowChart
