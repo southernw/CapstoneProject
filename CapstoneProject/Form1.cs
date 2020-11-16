@@ -18,6 +18,9 @@ namespace CapstoneProject
         private IconButton currentBtn;
         private Panel leftBoderButton;
         private Form currentChildForm;
+        
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -29,12 +32,25 @@ namespace CapstoneProject
 
             this.Text = String.Empty;
             this.ControlBox = false;
-            this.DoubleBuffered = true;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.DoubleBuffered = true ;
             this.MaximizedBounds = Screen.FromHandle(Handle).WorkingArea; //Fix window full screen resize
+            //this.WindowState = FormWindowState.Normal;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            label1.Text = "Welcome to the Single Well Evaluation Tool \n" +
+                "*To get started, choose an option from the menu";
+
+            Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
+            this.btnHome.ForeColor = Color.Gray;
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
+            this.btnHome.ForeColor = Color.Gray;
+            this.btnGas.ForeColor = color;
+            this.btnOil.ForeColor = color;
+            this.btnCashFlow.ForeColor = color;
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
@@ -44,16 +60,36 @@ namespace CapstoneProject
         private void iconButton3_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormGas());
+            Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
+            this.btnGas.ForeColor = Color.Gray;
+            this.btnHome.ForeColor = color;
+            this.btnOil.ForeColor = color;
+            this.btnCashFlow.ForeColor = color;
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
+            Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
             OpenChildForm(new FormOil());
+            this.btnOil.ForeColor = Color.Gray;
+            this.btnHome.ForeColor = color;
+            this.btnGas.ForeColor = color;
+            this.btnCashFlow.ForeColor = color;
+
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormCashFlow());
+            Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
+            FormCashFlow cashFlow = new FormCashFlow();
+            this.WindowState = FormWindowState.Maximized;
+            this.btnCashFlow.ForeColor = Color.Gray;
+            this.btnHome.ForeColor = color;
+            this.btnOil.ForeColor = color;
+            this.btnGas.ForeColor = color;
+            OpenChildForm(cashFlow);
+            
+
         }
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)
@@ -63,7 +99,8 @@ namespace CapstoneProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Size = new Size(1585, 888);
+           
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
@@ -97,14 +134,16 @@ namespace CapstoneProject
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
+            childForm.Dock = DockStyle.Fill ;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            //childForm.WindowState = FormWindowState.Maximized;
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
+
             const string message =
         "Are you sure that you would like to exit the program?";
             const string caption = "Exit?";

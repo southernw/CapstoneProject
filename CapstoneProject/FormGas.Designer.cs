@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGas));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,8 +69,6 @@
             this.txtRecFactor = new System.Windows.Forms.TextBox();
             this.txtNetH = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -76,21 +77,45 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(180, 51);
+            this.panel1.Location = new System.Drawing.Point(100, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1270, 786);
+            this.panel1.Size = new System.Drawing.Size(1249, 717);
             this.panel1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
+            this.button3.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(205, 582);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(178, 40);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Clear Inputs";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
+            this.button2.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.button2.Location = new System.Drawing.Point(639, 582);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(178, 40);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(237)))), ((int)(((byte)(226)))));
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
@@ -106,10 +131,11 @@
             this.groupBox2.Controls.Add(this.txtTtlResBO);
             this.groupBox2.Controls.Add(this.txtTtlResMMCF);
             this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.groupBox2.Location = new System.Drawing.Point(673, 16);
+            this.groupBox2.Location = new System.Drawing.Point(639, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(547, 658);
+            this.groupBox2.Size = new System.Drawing.Size(574, 560);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reults";
@@ -136,9 +162,12 @@
             // 
             // txtMWE
             // 
+            this.txtMWE.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMWE.Enabled = false;
             this.txtMWE.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtMWE.Location = new System.Drawing.Point(304, 257);
             this.txtMWE.Name = "txtMWE";
+            this.txtMWE.ReadOnly = true;
             this.txtMWE.Size = new System.Drawing.Size(206, 30);
             this.txtMWE.TabIndex = 19;
             // 
@@ -164,9 +193,12 @@
             // 
             // txtResPerBO
             // 
+            this.txtResPerBO.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResPerBO.Enabled = false;
             this.txtResPerBO.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtResPerBO.Location = new System.Drawing.Point(10, 53);
             this.txtResPerBO.Name = "txtResPerBO";
+            this.txtResPerBO.ReadOnly = true;
             this.txtResPerBO.Size = new System.Drawing.Size(201, 30);
             this.txtResPerBO.TabIndex = 13;
             // 
@@ -182,17 +214,23 @@
             // 
             // txtResPerMMCF
             // 
+            this.txtResPerMMCF.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResPerMMCF.Enabled = false;
             this.txtResPerMMCF.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtResPerMMCF.Location = new System.Drawing.Point(304, 51);
             this.txtResPerMMCF.Name = "txtResPerMMCF";
+            this.txtResPerMMCF.ReadOnly = true;
             this.txtResPerMMCF.Size = new System.Drawing.Size(206, 30);
             this.txtResPerMMCF.TabIndex = 14;
             // 
             // txtPorFeet
             // 
+            this.txtPorFeet.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPorFeet.Enabled = false;
             this.txtPorFeet.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtPorFeet.Location = new System.Drawing.Point(6, 257);
             this.txtPorFeet.Name = "txtPorFeet";
+            this.txtPorFeet.ReadOnly = true;
             this.txtPorFeet.Size = new System.Drawing.Size(205, 30);
             this.txtPorFeet.TabIndex = 17;
             // 
@@ -208,25 +246,35 @@
             // 
             // txtMMCF_PortFt
             // 
+            this.txtMMCF_PortFt.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMMCF_PortFt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMMCF_PortFt.Enabled = false;
             this.txtMMCF_PortFt.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtMMCF_PortFt.Location = new System.Drawing.Point(160, 328);
             this.txtMMCF_PortFt.Name = "txtMMCF_PortFt";
+            this.txtMMCF_PortFt.ReadOnly = true;
             this.txtMMCF_PortFt.Size = new System.Drawing.Size(215, 30);
             this.txtMMCF_PortFt.TabIndex = 21;
             // 
             // txtTtlResBO
             // 
+            this.txtTtlResBO.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTtlResBO.Enabled = false;
             this.txtTtlResBO.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtTtlResBO.Location = new System.Drawing.Point(6, 155);
             this.txtTtlResBO.Name = "txtTtlResBO";
+            this.txtTtlResBO.ReadOnly = true;
             this.txtTtlResBO.Size = new System.Drawing.Size(205, 30);
             this.txtTtlResBO.TabIndex = 15;
             // 
             // txtTtlResMMCF
             // 
+            this.txtTtlResMMCF.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTtlResMMCF.Enabled = false;
             this.txtTtlResMMCF.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtTtlResMMCF.Location = new System.Drawing.Point(304, 150);
             this.txtTtlResMMCF.Name = "txtTtlResMMCF";
+            this.txtTtlResMMCF.ReadOnly = true;
             this.txtTtlResMMCF.Size = new System.Drawing.Size(206, 30);
             this.txtTtlResMMCF.TabIndex = 16;
             // 
@@ -245,7 +293,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.button1.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(25, 680);
+            this.button1.Location = new System.Drawing.Point(21, 582);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 40);
             this.button1.TabIndex = 11;
@@ -275,10 +323,11 @@
             this.groupBox1.Controls.Add(this.txtAcres);
             this.groupBox1.Controls.Add(this.txtRecFactor);
             this.groupBox1.Controls.Add(this.txtNetH);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.groupBox1.Location = new System.Drawing.Point(21, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(574, 658);
+            this.groupBox1.Size = new System.Drawing.Size(574, 560);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inputs";
@@ -308,9 +357,9 @@
             this.lblDepth.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblDepth.Location = new System.Drawing.Point(310, 159);
             this.lblDepth.Name = "lblDepth";
-            this.lblDepth.Size = new System.Drawing.Size(94, 22);
+            this.lblDepth.Size = new System.Drawing.Size(89, 22);
             this.lblDepth.TabIndex = 16;
-            this.lblDepth.Text = "Depth (ft):";
+            this.lblDepth.Text = "Depth (ft)";
             // 
             // txtDepth
             // 
@@ -336,9 +385,9 @@
             this.lblBblMillion.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblBblMillion.Location = new System.Drawing.Point(310, 94);
             this.lblBblMillion.Name = "lblBblMillion";
-            this.lblBblMillion.Size = new System.Drawing.Size(123, 22);
+            this.lblBblMillion.Size = new System.Drawing.Size(118, 22);
             this.lblBblMillion.TabIndex = 13;
-            this.lblBblMillion.Text = "BBL / Million:";
+            this.lblBblMillion.Text = "BBL / Million";
             // 
             // txtAvgPor
             // 
@@ -355,9 +404,9 @@
             this.lblAvgPoros.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblAvgPoros.Location = new System.Drawing.Point(310, 35);
             this.lblAvgPoros.Name = "lblAvgPoros";
-            this.lblAvgPoros.Size = new System.Drawing.Size(152, 22);
+            this.lblAvgPoros.Size = new System.Drawing.Size(147, 22);
             this.lblAvgPoros.TabIndex = 11;
-            this.lblAvgPoros.Text = "Average Porosity:";
+            this.lblAvgPoros.Text = "Average Porosity";
             // 
             // lblNetH
             // 
@@ -365,9 +414,9 @@
             this.lblNetH.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblNetH.Location = new System.Drawing.Point(37, 303);
             this.lblNetH.Name = "lblNetH";
-            this.lblNetH.Size = new System.Drawing.Size(99, 22);
+            this.lblNetH.Size = new System.Drawing.Size(94, 22);
             this.lblNetH.TabIndex = 10;
-            this.lblNetH.Text = "Net Height:";
+            this.lblNetH.Text = "Net Height";
             // 
             // lblRecFactor
             // 
@@ -375,9 +424,9 @@
             this.lblRecFactor.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblRecFactor.Location = new System.Drawing.Point(37, 230);
             this.lblRecFactor.Name = "lblRecFactor";
-            this.lblRecFactor.Size = new System.Drawing.Size(180, 22);
+            this.lblRecFactor.Size = new System.Drawing.Size(175, 22);
             this.lblRecFactor.TabIndex = 9;
-            this.lblRecFactor.Text = "Recovery Factor (%):";
+            this.lblRecFactor.Text = "Recovery Factor (%)";
             this.lblRecFactor.Click += new System.EventHandler(this.lblRecFactor_Click);
             // 
             // lblAcres
@@ -386,9 +435,9 @@
             this.lblAcres.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblAcres.Location = new System.Drawing.Point(36, 159);
             this.lblAcres.Name = "lblAcres";
-            this.lblAcres.Size = new System.Drawing.Size(60, 22);
+            this.lblAcres.Size = new System.Drawing.Size(55, 22);
             this.lblAcres.TabIndex = 8;
-            this.lblAcres.Text = "Acres:";
+            this.lblAcres.Text = "Acres";
             // 
             // lblSW
             // 
@@ -396,9 +445,9 @@
             this.lblSW.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblSW.Location = new System.Drawing.Point(37, 94);
             this.lblSW.Name = "lblSW";
-            this.lblSW.Size = new System.Drawing.Size(132, 22);
+            this.lblSW.Size = new System.Drawing.Size(127, 22);
             this.lblSW.TabIndex = 7;
-            this.lblSW.Text = "Salt Water (%):";
+            this.lblSW.Text = "Salt Water (%)";
             this.lblSW.Click += new System.EventHandler(this.lblSW_Click);
             // 
             // lblBHP
@@ -407,9 +456,9 @@
             this.lblBHP.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.lblBHP.Location = new System.Drawing.Point(36, 35);
             this.lblBHP.Name = "lblBHP";
-            this.lblBHP.Size = new System.Drawing.Size(192, 22);
+            this.lblBHP.Size = new System.Drawing.Size(187, 22);
             this.lblBHP.TabIndex = 6;
-            this.lblBHP.Text = "Bottom Hole Pressure:";
+            this.lblBHP.Text = "Bottom Hole Pressure";
             // 
             // txtBHP
             // 
@@ -461,30 +510,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
-            this.button2.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.button2.Location = new System.Drawing.Point(673, 680);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 40);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
-            this.button3.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(209, 680);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 40);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // FormGas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,8 +517,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1569, 849);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGas";
             this.Text = "FormGas";
+            this.Load += new System.EventHandler(this.FormGas_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -63,26 +63,36 @@ namespace CapstoneProject
                 double MWE = gas.calcMWE(double.Parse(txtBHP.Text), double.Parse(txtDepth.Text));
                 double MMCF_PorFt = gas.calcMMCF_PORFT(double.Parse(txtAcres.Text), double.Parse(txtSW.Text), double.Parse(txtBHP.Text), double.Parse(txtRecFactor.Text));
 
-                txtMMCF_PortFt.Text = MMCF_PorFt.ToString();
-                txtPorFeet.Text = porFeet.ToString();
-                txtMWE.Text = MWE.ToString();
+              
+                txtMMCF_PortFt.Text = MMCF_PorFt.ToString("N0");
+                txtPorFeet.Text = porFeet.ToString("N0");
+                txtMWE.Text = MWE.ToString("N0");
 
 
                 // per well
+                txtRecFactor.Enabled = true;
+                txtResPerBO.Enabled = true;
+                txtResPerMMCF.Enabled = true;
+                txtResPerMMCF.Enabled = true;
+                txtTtlResBO.Enabled = true;
+                txtTtlResMMCF.Enabled = true;
+                txtMWE.Enabled = true;
+                txtPorFeet.Enabled = true;
+                txtMMCF_PortFt.Enabled = true;
 
                 double txtResPerMMCFF = gas.calcPerWellMMCF(porFeet, MMCF_PorFt);
-                txtResPerMMCF.Text = txtResPerMMCFF.ToString();
+                txtResPerMMCF.Text = txtResPerMMCFF.ToString("N0");
 
                 double txtResPerBO2 = gas.calcPerWellBO(double.Parse(txtBblMillion.Text), txtResPerMMCFF, txtResPerMMCFF);
-                txtResPerBO.Text = txtResPerBO2.ToString();
+                txtResPerBO.Text = txtResPerBO2.ToString("N0");
 
 
                 //total res
                 double TtlResMMCF = gas.calcTotalResMMCF(txtResPerMMCFF, int.Parse(txtWells.Text));
-                txtTtlResMMCF.Text = TtlResMMCF.ToString();
+                txtTtlResMMCF.Text = TtlResMMCF.ToString("N0");
 
                 double ttlResBO = gas.calcTotalResBO(txtResPerBO2, int.Parse(txtWells.Text));
-                txtTtlResBO.Text = ttlResBO.ToString();
+                txtTtlResBO.Text = ttlResBO.ToString("N0");
             }
             catch (Exception ex)
             {
@@ -111,12 +121,48 @@ namespace CapstoneProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            if (txtResPerBO.Text == "")
+            {
 
+                MessageBox.Show("No output to save. Please try again!", "Error Saving",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+                try
+                {
+                    Stream myStream;
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+                    saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                    saveFileDialog1.Title = "Save Results";
+                    saveFileDialog1.RestoreDirectory = true;
+
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        string test = "Per Well BO: " + txtResPerBO.Text.ToString() + "\n" +
+                                      "Per Well MMCF : " + txtResPerMMCF.Text.ToString() + "\n" +
+                                      "Total Reserve BO: " + txtTtlResBO.Text.ToString() + "\n" +
+                                      "Total Reserve MMCF " + txtTtlResMMCF.Text.ToString() + "\n" +
+                                      "Porosity Feet: " + txtPorFeet.Text.ToString() + "\n" +
+                                      "Mud Weight Estimated: " + txtMWE.Text.ToString() + "\n" +
+                                      "MMCF/Por Ft: " + txtMMCF_PortFt.Text.ToString();
+
+                        string fileName = saveFileDialog1.FileName;
+                        File.WriteAllText(fileName, test);
+
+                    }
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show("There was an error. Please try again!", "Error Saving",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
         }
 
         private void lblSW_Click(object sender, EventArgs e)
@@ -127,6 +173,24 @@ namespace CapstoneProject
         private void lblRecFactor_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormGas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtBHP.Text = "";
+            txtSW.Text = "";
+            txtNetH.Text = "";
+            txtDepth.Text = "";
+            txtRecFactor.Text = "";
+            txtAcres.Text = "";
+            txtWells.Text = "";
+            txtBblMillion.Text = "";
+            txtAvgPor.Text = "";
         }
     }
 }

@@ -47,21 +47,28 @@ namespace CapstoneProject
             
                 OilCalculation oil = new OilCalculation(double.Parse(txtThickness.Text), double.Parse(txtPorosity.Text), double.Parse(txtWaterSat.Text), double.Parse(txtArea.Text), double.Parse(txtRecFactor.Text));
 
-                double porFeet = oil.calcPorFeet(double.Parse(txtThickness.Text), double.Parse(txtPorosity.Text));
+                txtResPorFeet.Enabled = true;
+                txtResBblAcre.Enabled = true;
+                txtRecFactor.Enabled = true;
+                txtResBblOoip.Enabled = true;
+                txtResBoAcrFt.Enabled = true;
+                txtResRecov.Enabled = true;
+                    
+                    double porFeet = oil.calcPorFeet(double.Parse(txtThickness.Text), double.Parse(txtPorosity.Text));
 
-                txtResPorFeet.Text = porFeet.ToString("N", new CultureInfo("en-US"));
+                txtResPorFeet.Text = porFeet.ToString("N0");
 
                 double bblPerAcre = oil.calcBblPerAcre(porFeet, double.Parse(txtWaterSat.Text));
-                txtResBblAcre.Text = bblPerAcre.ToString("N", new CultureInfo("en-US"));
+                txtResBblAcre.Text = bblPerAcre.ToString("N0");
 
                 double bblOoip = oil.calcBblPerOoip(bblPerAcre, oil.getArea());
-                txtResBblOoip.Text = bblOoip.ToString("N", new CultureInfo("en-US"));
+                txtResBblOoip.Text = bblOoip.ToString("N0");
 
                 double bblRecov = oil.calcBblRecov(bblOoip, double.Parse(txtRecFactor.Text));
-                txtResRecov.Text = bblRecov.ToString("N", new CultureInfo("en-US"));
+                txtResRecov.Text = bblRecov.ToString("N0");
 
                 double boEq = oil.calcBoEq(bblRecov, double.Parse(txtArea.Text), double.Parse(txtThickness.Text));
-                txtResBoAcrFt.Text = boEq.ToString("N", new CultureInfo("en-US"));
+                txtResBoAcrFt.Text = boEq.ToString("N0");
 
             }catch (Exception ex)
             {
@@ -124,8 +131,9 @@ namespace CapstoneProject
             }
             catch (IOException ex)
             {
-
-            }
+                    MessageBox.Show("No output to save. Please try again!", "Error Saving",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -135,6 +143,11 @@ namespace CapstoneProject
             txtRecFactor.Text = "";
             txtThickness.Text = "";
             txtWaterSat.Text = "";
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

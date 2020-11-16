@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOil));
             this.txtThickness = new System.Windows.Forms.TextBox();
             this.txtPorosity = new System.Windows.Forms.TextBox();
             this.txtWaterSat = new System.Windows.Forms.TextBox();
@@ -67,7 +68,7 @@
             this.txtThickness.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtThickness.Location = new System.Drawing.Point(40, 61);
             this.txtThickness.Name = "txtThickness";
-            this.txtThickness.Size = new System.Drawing.Size(204, 30);
+            this.txtThickness.Size = new System.Drawing.Size(262, 30);
             this.txtThickness.TabIndex = 1;
             this.txtThickness.Text = "15";
             // 
@@ -76,7 +77,7 @@
             this.txtPorosity.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtPorosity.Location = new System.Drawing.Point(40, 121);
             this.txtPorosity.Name = "txtPorosity";
-            this.txtPorosity.Size = new System.Drawing.Size(204, 30);
+            this.txtPorosity.Size = new System.Drawing.Size(262, 30);
             this.txtPorosity.TabIndex = 2;
             this.txtPorosity.Text = "20";
             // 
@@ -85,7 +86,7 @@
             this.txtWaterSat.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtWaterSat.Location = new System.Drawing.Point(40, 186);
             this.txtWaterSat.Name = "txtWaterSat";
-            this.txtWaterSat.Size = new System.Drawing.Size(204, 30);
+            this.txtWaterSat.Size = new System.Drawing.Size(262, 30);
             this.txtWaterSat.TabIndex = 3;
             this.txtWaterSat.Text = "45";
             // 
@@ -94,7 +95,7 @@
             this.txtArea.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtArea.Location = new System.Drawing.Point(40, 257);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(204, 30);
+            this.txtArea.Size = new System.Drawing.Size(262, 30);
             this.txtArea.TabIndex = 4;
             this.txtArea.Text = "120";
             this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
@@ -104,7 +105,7 @@
             this.txtRecFactor.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtRecFactor.Location = new System.Drawing.Point(40, 330);
             this.txtRecFactor.Name = "txtRecFactor";
-            this.txtRecFactor.Size = new System.Drawing.Size(204, 30);
+            this.txtRecFactor.Size = new System.Drawing.Size(262, 30);
             this.txtRecFactor.TabIndex = 5;
             this.txtRecFactor.Text = "35";
             // 
@@ -115,16 +116,17 @@
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(297, 35);
+            this.panel1.Location = new System.Drawing.Point(100, 39);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1249, 717);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.button2.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.button2.Location = new System.Drawing.Point(693, 582);
+            this.button2.Location = new System.Drawing.Point(656, 582);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 40);
             this.button2.TabIndex = 14;
@@ -147,8 +149,9 @@
             this.groupBox2.Controls.Add(this.txtResBblOoip);
             this.groupBox2.Controls.Add(this.txtResBoAcrFt);
             this.groupBox2.Controls.Add(this.txtResRecov);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.groupBox2.Location = new System.Drawing.Point(693, 16);
+            this.groupBox2.Location = new System.Drawing.Point(656, 16);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(574, 560);
             this.groupBox2.TabIndex = 11;
@@ -169,71 +172,87 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(32, 227);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 22);
+            this.label4.Size = new System.Drawing.Size(147, 22);
             this.label4.TabIndex = 15;
-            this.label4.Text = "BBL Recoverable:";
+            this.label4.Text = "BBL Recoverable";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(32, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(209, 22);
+            this.label3.Size = new System.Drawing.Size(204, 22);
             this.label3.TabIndex = 14;
-            this.label3.Text = "BBL Original Oil in Place:";
+            this.label3.Text = "BBL Original Oil in Place";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(32, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 22);
+            this.label2.Size = new System.Drawing.Size(117, 22);
             this.label2.TabIndex = 13;
-            this.label2.Text = "BBL Per Acre:";
+            this.label2.Text = "BBL Per Acre";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 22);
+            this.label1.Size = new System.Drawing.Size(115, 22);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Porosity Feet:";
+            this.label1.Text = "Porosity Feet";
             // 
             // txtResPorFeet
             // 
+            this.txtResPorFeet.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResPorFeet.Enabled = false;
             this.txtResPorFeet.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.txtResPorFeet.Location = new System.Drawing.Point(36, 61);
             this.txtResPorFeet.Name = "txtResPorFeet";
-            this.txtResPorFeet.Size = new System.Drawing.Size(193, 30);
+            this.txtResPorFeet.ReadOnly = true;
+            this.txtResPorFeet.Size = new System.Drawing.Size(262, 30);
             this.txtResPorFeet.TabIndex = 7;
             // 
             // txtResBblAcre
             // 
+            this.txtResBblAcre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResBblAcre.Enabled = false;
             this.txtResBblAcre.Location = new System.Drawing.Point(36, 121);
             this.txtResBblAcre.Name = "txtResBblAcre";
-            this.txtResBblAcre.Size = new System.Drawing.Size(193, 30);
+            this.txtResBblAcre.ReadOnly = true;
+            this.txtResBblAcre.Size = new System.Drawing.Size(262, 30);
             this.txtResBblAcre.TabIndex = 8;
             // 
             // txtResBblOoip
             // 
+            this.txtResBblOoip.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResBblOoip.Enabled = false;
             this.txtResBblOoip.Location = new System.Drawing.Point(36, 186);
             this.txtResBblOoip.Name = "txtResBblOoip";
-            this.txtResBblOoip.Size = new System.Drawing.Size(193, 30);
+            this.txtResBblOoip.ReadOnly = true;
+            this.txtResBblOoip.Size = new System.Drawing.Size(262, 30);
             this.txtResBblOoip.TabIndex = 9;
             // 
             // txtResBoAcrFt
             // 
+            this.txtResBoAcrFt.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResBoAcrFt.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtResBoAcrFt.Enabled = false;
             this.txtResBoAcrFt.Location = new System.Drawing.Point(36, 327);
             this.txtResBoAcrFt.Name = "txtResBoAcrFt";
-            this.txtResBoAcrFt.Size = new System.Drawing.Size(193, 30);
+            this.txtResBoAcrFt.ReadOnly = true;
+            this.txtResBoAcrFt.Size = new System.Drawing.Size(262, 30);
             this.txtResBoAcrFt.TabIndex = 11;
             // 
             // txtResRecov
             // 
-            this.txtResRecov.Location = new System.Drawing.Point(36, 254);
+            this.txtResRecov.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResRecov.Enabled = false;
+            this.txtResRecov.Location = new System.Drawing.Point(36, 257);
             this.txtResRecov.Name = "txtResRecov";
-            this.txtResRecov.Size = new System.Drawing.Size(193, 30);
+            this.txtResRecov.ReadOnly = true;
+            this.txtResRecov.Size = new System.Drawing.Size(262, 30);
             this.txtResRecov.TabIndex = 10;
             // 
             // btnClear
@@ -262,6 +281,7 @@
             this.groupBox1.Controls.Add(this.txtWaterSat);
             this.groupBox1.Controls.Add(this.txtArea);
             this.groupBox1.Controls.Add(this.txtRecFactor);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.groupBox1.Location = new System.Drawing.Point(21, 16);
             this.groupBox1.Name = "groupBox1";
@@ -275,45 +295,45 @@
             this.lblRecRactor.AutoSize = true;
             this.lblRecRactor.Location = new System.Drawing.Point(37, 303);
             this.lblRecRactor.Name = "lblRecRactor";
-            this.lblRecRactor.Size = new System.Drawing.Size(180, 22);
+            this.lblRecRactor.Size = new System.Drawing.Size(175, 22);
             this.lblRecRactor.TabIndex = 10;
-            this.lblRecRactor.Text = "Recovery Factor (%):";
+            this.lblRecRactor.Text = "Recovery Factor (%)";
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.Location = new System.Drawing.Point(37, 230);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(113, 22);
+            this.lblArea.Size = new System.Drawing.Size(108, 22);
             this.lblArea.TabIndex = 9;
-            this.lblArea.Text = "Area (acres):";
+            this.lblArea.Text = "Area (acres)";
             // 
             // lblWaterSat
             // 
             this.lblWaterSat.AutoSize = true;
             this.lblWaterSat.Location = new System.Drawing.Point(36, 159);
             this.lblWaterSat.Name = "lblWaterSat";
-            this.lblWaterSat.Size = new System.Drawing.Size(187, 22);
+            this.lblWaterSat.Size = new System.Drawing.Size(182, 22);
             this.lblWaterSat.TabIndex = 8;
-            this.lblWaterSat.Text = "Water Saturation (%):";
+            this.lblWaterSat.Text = "Water Saturation (%)";
             // 
             // lblPorosity
             // 
             this.lblPorosity.AutoSize = true;
             this.lblPorosity.Location = new System.Drawing.Point(37, 94);
             this.lblPorosity.Name = "lblPorosity";
-            this.lblPorosity.Size = new System.Drawing.Size(118, 22);
+            this.lblPorosity.Size = new System.Drawing.Size(113, 22);
             this.lblPorosity.TabIndex = 7;
-            this.lblPorosity.Text = "Porosity (%):";
+            this.lblPorosity.Text = "Porosity (%)";
             // 
             // lblThickness
             // 
             this.lblThickness.AutoSize = true;
             this.lblThickness.Location = new System.Drawing.Point(36, 35);
             this.lblThickness.Name = "lblThickness";
-            this.lblThickness.Size = new System.Drawing.Size(125, 22);
+            this.lblThickness.Size = new System.Drawing.Size(120, 22);
             this.lblThickness.TabIndex = 6;
-            this.lblThickness.Text = "Thickness (ft):";
+            this.lblThickness.Text = "Thickness (ft)";
             // 
             // button1
             // 
@@ -339,6 +359,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1572, 845);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOil";
             this.Text = "FormOil";
             this.Load += new System.EventHandler(this.FormOil_Load);

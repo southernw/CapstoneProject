@@ -36,17 +36,17 @@ namespace CapstoneProject
         // Gas_rate = calculated value
         // A_PARAM * EXP(B_PARAM * n)
 
-       
+
         public void addGasRate(DataGridView d1, int month)
         {
             double gasRate;
             d1.Rows[0].Cells["Gas_Rate"].Value = A_PARAM;
             for (int i = 1; i < month; i++)
-                {
-                    
-                    d1.Rows[i].Cells["Gas_Rate"].Value = gasRate = A_PARAM * Math.Exp(B_PARAM * (i + 1));
+            {
 
-                }    
+                d1.Rows[i].Cells["Gas_Rate"].Value = gasRate = A_PARAM * Math.Exp(B_PARAM * (i + 1));
+
+            }
         }
         //*********************************************************************************************************************************
 
@@ -56,7 +56,7 @@ namespace CapstoneProject
         // initialize the columns
         public void modf(DataGridView d1)
         {
-            
+
             d1.ColumnCount = 11;
             d1.Columns[0].Name = "Month";
             d1.Columns[1].Name = "Gas_Rate";
@@ -72,23 +72,25 @@ namespace CapstoneProject
 
             d1.Columns["Month"].HeaderText = "Month";
             d1.Columns["Gas_Rate"].HeaderText = "Gas Rate";
-            d1.Columns["Gas_Rate"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["Gas_Rate"].DefaultCellStyle.Format = "N0";
             d1.Columns["Gas_Price"].HeaderText = "Gas Price";
-            d1.Columns["Gas_Price"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["Gas_Price"].DefaultCellStyle.Format = "c";
             d1.Columns["Cum_MMCF"].HeaderText = "Cummulative MMCF";
+            d1.Columns["Cum_MMCF"].DefaultCellStyle.Format = "N0";
             d1.Columns["Oil_Rate"].HeaderText = "Oil Rate";
-            d1.Columns["Oil_Rate"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["Oil_Rate"].DefaultCellStyle.Format = "N0";
             d1.Columns["Oil_Price"].HeaderText = "Oil Price";
-            d1.Columns["Oil_Price"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["Oil_Price"].DefaultCellStyle.Format = "c";
             d1.Columns["Cum_Oil"].HeaderText = "Cummulative Oil";
+            d1.Columns["Cum_Oil"].DefaultCellStyle.Format = "N0";
             d1.Columns["LOE"].HeaderText = "Lease Operating Expense";
-            d1.Columns["LOE"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["LOE"].DefaultCellStyle.Format = "c";
             d1.Columns["Gross_Rev"].HeaderText = "Gross Revenue";
-            d1.Columns["Gross_Rev"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["Gross_Rev"].DefaultCellStyle.Format = "c";
             d1.Columns["Net_Rev"].HeaderText = "Net Revenue";
-            d1.Columns["Net_Rev"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["Net_Rev"].DefaultCellStyle.Format = "c";
             d1.Columns["Sum_NetRev"].HeaderText = "Sum of Net Revenue";
-            d1.Columns["Sum_NetRev"].DefaultCellStyle.Format = "0.00";
+            d1.Columns["Sum_NetRev"].DefaultCellStyle.Format = "c";
 
         }
 
@@ -138,7 +140,7 @@ namespace CapstoneProject
             }
 
         }
-        
+
         // Cummulative MMCF********************************************************************************
         // gas_rate(n) + gas_rate(n + 1)
         public void addCumMMCF(DataGridView d1, int month)
@@ -153,10 +155,10 @@ namespace CapstoneProject
                 num = (double)d1.Rows[i - 1].Cells["Gas_Rate"].Value;
                 num = num + num2;
                 num2 = num;
-                
+
                 d1.Rows[i - 1].Cells["Cum_MMCF"].Value = num2;
 
-            } 
+            }
         }
 
         // Oil Rate BBL per Month*****************************************************************************
@@ -165,13 +167,13 @@ namespace CapstoneProject
         {
             double num = 0;
             double num2 = 0;
-            for(int i = 1; i <= month; i++)
+            for (int i = 1; i <= month; i++)
             {
                 num = (double)d1.Rows[i - 1].Cells["Gas_Rate"].Value;
                 num2 = num / 1000 * BPM;
 
                 d1.Rows[i - 1].Cells["Oil_Rate"].Value = num2;
-            } 
+            }
 
         }
 
@@ -180,7 +182,7 @@ namespace CapstoneProject
         // oil_price(n) + oil_price(n) * OIL_ESCL / 12
         public void addOilPrice(DataGridView d1, int month, double OIL_ESCL, double OIL_PRICE)
         {
-            
+
             double num = 0;
             double num2 = 0;
             d1.Rows[0].Cells["Oil_Price"].Value = OIL_PRICE;
@@ -245,23 +247,30 @@ namespace CapstoneProject
             double LOE = 0;
             double num = 0;
 
-            for (int i = 1; i <= month; i++)
+            try
             {
-                gRate = (double)d1.Rows[i - 1].Cells["Gas_Rate"].Value;
-                gPrice = (double)d1.Rows[i - 1].Cells["Gas_Price"].Value;
-                oRate = (double)d1.Rows[i - 1].Cells["Oil_Rate"].Value;
-                oPrice = (double)d1.Rows[i - 1].Cells["Oil_Price"].Value;
-                LOE = (double)d1.Rows[i - 1].Cells["LOE"].Value;
+                for (int i = 1; i <= month; i++)
+                {
+                    gRate = (double)d1.Rows[i - 1].Cells["Gas_Rate"].Value;
+                    gPrice = (double)d1.Rows[i - 1].Cells["Gas_Price"].Value;
+                    oRate = (double)d1.Rows[i - 1].Cells["Oil_Rate"].Value;
+                    oPrice = (double)d1.Rows[i -1].Cells["Oil_Price"].Value;
+                    LOE = (double)d1.Rows[i - 1].Cells["LOE"].Value;
 
-                num = gRate * gPrice + oRate * oPrice - LOE;
-                //num = num + oRate;
-                //num = num * oPrice;
-                //num = num - LOE;
+                    num = gRate * gPrice + oRate * oPrice - LOE;
+                    //num = num + oRate;
+                    //num = num * oPrice;
+                    //num = num - LOE;
 
-                d1.Rows[i - 1].Cells["Gross_Rev"].Value = num;
+                    d1.Rows[i - 1].Cells["Gross_Rev"].Value = num;
+                }
+
+            }
+            catch (System.NullReferenceException ex)
+            {
+                MessageBox.Show("There was an error, please try again. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         // Net revenue**************************************************************************
         // NRI * GROSS_REV(n)
         public void addNetRev(DataGridView d1, int month)

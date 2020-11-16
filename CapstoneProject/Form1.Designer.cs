@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnExit = new FontAwesome.Sharp.IconButton();
@@ -38,15 +39,17 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelMain.SuspendLayout();
             this.panelDesktop.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -77,7 +80,7 @@
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.IconSize = 35;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 357);
+            this.btnExit.Location = new System.Drawing.Point(0, 355);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
             this.btnExit.Rotation = 0D;
@@ -101,7 +104,7 @@
             this.btnCashFlow.IconColor = System.Drawing.Color.White;
             this.btnCashFlow.IconSize = 35;
             this.btnCashFlow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCashFlow.Location = new System.Drawing.Point(0, 297);
+            this.btnCashFlow.Location = new System.Drawing.Point(0, 295);
             this.btnCashFlow.Name = "btnCashFlow";
             this.btnCashFlow.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
             this.btnCashFlow.Rotation = 0D;
@@ -125,7 +128,7 @@
             this.btnGas.IconColor = System.Drawing.Color.White;
             this.btnGas.IconSize = 35;
             this.btnGas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGas.Location = new System.Drawing.Point(0, 237);
+            this.btnGas.Location = new System.Drawing.Point(0, 235);
             this.btnGas.Name = "btnGas";
             this.btnGas.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
             this.btnGas.Rotation = 0D;
@@ -149,7 +152,7 @@
             this.btnOil.IconColor = System.Drawing.Color.White;
             this.btnOil.IconSize = 35;
             this.btnOil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOil.Location = new System.Drawing.Point(0, 177);
+            this.btnOil.Location = new System.Drawing.Point(0, 175);
             this.btnOil.Name = "btnOil";
             this.btnOil.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
             this.btnOil.Rotation = 0D;
@@ -173,7 +176,7 @@
             this.btnHome.IconColor = System.Drawing.Color.White;
             this.btnHome.IconSize = 35;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 117);
+            this.btnHome.Location = new System.Drawing.Point(0, 115);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
             this.btnHome.Rotation = 0D;
@@ -192,64 +195,60 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 117);
+            this.panelLogo.Size = new System.Drawing.Size(220, 115);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(54, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(103, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 109);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(23)))));
-            this.panelMain.Controls.Add(this.panelShadow);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMain.Location = new System.Drawing.Point(220, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1071, 87);
+            this.panelMain.Size = new System.Drawing.Size(1071, 115);
             this.panelMain.TabIndex = 1;
             this.panelMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMain_MouseMove);
-            // 
-            // panelShadow
-            // 
-            this.panelShadow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(90)))), ((int)(((byte)(22)))));
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(0, 0);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1071, 18);
-            this.panelShadow.TabIndex = 5;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
-            this.panelDesktop.Controls.Add(this.label2);
-            this.panelDesktop.Controls.Add(this.label1);
+            this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 87);
+            this.panelDesktop.Location = new System.Drawing.Point(220, 115);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1071, 590);
+            this.panelDesktop.Size = new System.Drawing.Size(1071, 562);
             this.panelDesktop.TabIndex = 6;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // label2
+            // panel1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(539, 146);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(707, 416);
+            this.panel1.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(340, 227);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(602, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "*To get started, choose an option from the menu";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(317, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(210, 220);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -258,11 +257,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(340, 185);
+            this.label1.Location = new System.Drawing.Point(11, 249);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(542, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to the Single Well Evaluation Tool";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // MainForm
             // 
@@ -273,15 +278,17 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelMain.ResumeLayout(false);
             this.panelDesktop.ResumeLayout(false);
-            this.panelDesktop.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,9 +305,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelDesktop;
-        private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

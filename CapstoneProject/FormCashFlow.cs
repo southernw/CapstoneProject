@@ -19,24 +19,38 @@ namespace CapstoneProject
 {
     public partial class FormCashFlow : Form
     {
+        public string str;
         public FormCashFlow()
         {
             InitializeComponent();
 
         }
 
-    
-
+        
         private void FormCashFlow_Load(object sender, EventArgs e)
-         {
+        {
             button2.Enabled = false;
             button3.Enabled = false;
             CashFlow cash = new CashFlow();
             cash.modf(dataGridView1);
-            
-         }
 
- 
+            // this.MinimumSize = new Size(800, 600);
+            this.MinimumSize = Screen.PrimaryScreen.Bounds.Size;
+            this.WindowState = FormWindowState.Maximized;
+            this.SizeGripStyle = SizeGripStyle.Hide;
+
+            txtGasEscl.MouseHover += TextBox_MouseHover;
+            txtNRI.MouseHover += TextBox_MouseHover;
+            txtOilEscl.MouseHover += TextBox_MouseHover;
+            txtLOEEscl.MouseHover += TextBox_MouseHover;
+        }
+
+        private void TextBox_MouseHover(object sender, EventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            if (textbox != null)
+                toolTip2.Show("Please enter percentage in decimal", textbox);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -73,6 +87,8 @@ namespace CapstoneProject
             
                 try
                 {
+                    
+                    
                     double AParam = double.Parse(txtAParam.Text);
                     double BParam = double.Parse(txtBParam.Text);
                     double GasPrice = double.Parse(txtGasPrice.Text);
@@ -101,7 +117,11 @@ namespace CapstoneProject
                     return;
                 }
                 int months = int.Parse(txtMonths.Text);
-
+                if (months < 2)
+                {
+                    MessageBox.Show("Months must be greater than 1. Please try again. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                     dataGridView1.Rows.Clear();
 
                     cash.addRows(dataGridView1, months);
@@ -145,7 +165,7 @@ namespace CapstoneProject
                     }
                 }
          }
-
+       
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -153,7 +173,8 @@ namespace CapstoneProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormCashFlowChart form2 = new FormCashFlowChart(dataGridView1);
+            str = txtWellName.Text.ToString();
+            FormCashFlowChart form2 = new FormCashFlowChart(dataGridView1, txtWellName.Text);
             form2.Show();
         }
 
@@ -183,6 +204,71 @@ namespace CapstoneProject
             {
 
             }
+        }
+
+        private void txtNRI_TextChanged(object sender, EventArgs e)
+        {
+            toolTip1.Show("Please enter percentage in decimal", txtNRI);
+        }
+
+        private void txtNRI_Leave(object sender, EventArgs e)
+        {
+            toolTip1.Hide(txtNRI);
+        }
+
+        private void txtGasEscl_TextChanged(object sender, EventArgs e)
+        {
+            toolTip2.Show("Please enter percentage in decimal", txtGasEscl);
+        }
+
+        private void txtGasEscl_Leave(object sender, EventArgs e)
+        {
+            toolTip2.Hide(txtGasEscl);
+        }
+
+
+        private void txtLOEEscl_TextChanged(object sender, EventArgs e)
+        {
+            toolTip3.Show("Please enter percentage in decimal", txtLOEEscl);
+        }
+
+        private void txtLOEEscl_Leave(object sender, EventArgs e)
+        {
+            toolTip3.Hide(txtLOEEscl);
+        }
+
+
+        private void txtOilEscl_TextChanged(object sender, EventArgs e)
+        {
+            toolTip4.Show("Please enter percentage in decimal", txtOilEscl);
+        }
+
+        private void txtOilEscl_Leave(object sender, EventArgs e)
+        {
+            toolTip4.Hide(txtOilEscl);
+        }
+
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            txtAParam.Text = "";
+            txtBParam.Text = "";
+            txtBPM.Text = "";
+            txtGasEscl.Text = "";
+            txtGasPrice.Text = "";
+            txtLOEEscl.Text = "";
+            txtLOEMonth.Text = "";
+            txtMonths.Text = "";
+            txtNRI.Text = "";
+            txtOilEscalation.Text = "";
+            txtWellName.Text = "";
+            txtOilPrice.Text = "";
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
