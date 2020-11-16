@@ -19,16 +19,7 @@ namespace CapstoneProject
 
         //input variables
          //A_PARAM = 90000,
-          double  B_PARAM = -0.026,
-               GAS_PRICE = 2.5,
-               GAS_ESCL = 0.05,
-               LOE_MONTH = 1300,
-               LOE_ESCL = 0.04,
-               DISC_RATE = 0.00,
-               NRI = 0.0925,
-               BPM = 10.00,
-               OIL_PRICE = 42,
-               OIL_ESC = 0.04;
+        
 
         // declare the function
 
@@ -37,7 +28,7 @@ namespace CapstoneProject
         // A_PARAM * EXP(B_PARAM * n)
 
 
-        public void addGasRate(DataGridView d1, int month, double A_PARAM)
+        public void addGasRate(DataGridView d1, int month, double A_PARAM, double B_PARAM)
         {
             double gasRate;
             d1.Rows[0].Cells["Gas_Rate"].Value = A_PARAM;
@@ -118,7 +109,7 @@ namespace CapstoneProject
         // Gas Price*************************************************************************************
         // g, gas price (first month)
         // g + g * GAS_ESCL/12
-        public void addGasPrice(DataGridView d1, int month, double GAS_PRICE)
+        public void addGasPrice(DataGridView d1, int month, double GAS_PRICE, double GAS_ESCL)
         {
             double[] gasPrice = new double[month];
             double[] tmpArray = new double[month];
@@ -219,7 +210,7 @@ namespace CapstoneProject
         // Lease of Expense**********************************************************************************
         // LOE_MONTH(n) First month
         // LOE_MONTH(n) + LOE_MONTH(n) * LOE_ESCL / 12
-        public void addLOE(DataGridView d1, int month, double LOE_MONTH)
+        public void addLOE(DataGridView d1, int month, double LOE_MONTH, double LOE_ESCL)
         {
             double num = 0;
             double num2 = 0;
