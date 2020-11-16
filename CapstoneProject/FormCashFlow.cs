@@ -125,16 +125,16 @@ namespace CapstoneProject
                     dataGridView1.Rows.Clear();
 
                     cash.addRows(dataGridView1, months);
-                    cash.addGasPrice(dataGridView1, months);
+                    cash.addGasPrice(dataGridView1, months, GasPrice);
                     cash.addMonth(dataGridView1, months);
-                    cash.addGasRate(dataGridView1, months);
-                    cash.addCumMMCF(dataGridView1, months);
+                    cash.addGasRate(dataGridView1, months, AParam);
+                    cash.addCumMMCF(dataGridView1, months, AParam);
                     cash.addOilRateBBLMonth(dataGridView1, months, BPM);
                     cash.addOilPrice(dataGridView1, months, OIL_ESCL, OIL_PRICE);
                     cash.addCumOil(dataGridView1, months);
-                    cash.addLOE(dataGridView1, months);
+                    cash.addLOE(dataGridView1, months, LOEMonth);
                     cash.addGrossRev(dataGridView1, months);
-                    cash.addNetRev(dataGridView1, months);
+                    cash.addNetRev(dataGridView1, months, NRI);
                     cash.addSumOfNetRev(dataGridView1, months);
                     //double gasPrice = cash.gas_price(8);
                     // textBox2.Text = gasPrice.ToString();
