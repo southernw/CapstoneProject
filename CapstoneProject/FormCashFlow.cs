@@ -181,6 +181,15 @@ namespace CapstoneProject
         private void button3_Click(object sender, EventArgs e)
         {
 
+            if (txtWellName == null || string.IsNullOrWhiteSpace(txtWellName.Text))
+            {
+                errorProvider1.SetError(txtWellName, "Please set a well name");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtWellName, null);
+            }
 
             try
             {
@@ -190,6 +199,7 @@ namespace CapstoneProject
                 saveFileDialog1.Filter = "CSV Files (*.csv)|*.csv|Text Files (*.txt)|*.txt";
                 saveFileDialog1.Title = "Export Table Data";
                 saveFileDialog1.RestoreDirectory = true;
+                saveFileDialog1.FileName = txtWellName.Text.ToString();
 
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {

@@ -59,6 +59,7 @@ namespace CapstoneProject
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
+            
             OpenChildForm(new FormGas());
             Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
             this.btnGas.ForeColor = Color.Gray;
@@ -129,7 +130,7 @@ namespace CapstoneProject
         {
             if (currentChildForm != null)
             {
-                currentChildForm.Close();
+                currentChildForm.Hide();
             }
             currentChildForm = childForm;
             childForm.TopLevel = false;
