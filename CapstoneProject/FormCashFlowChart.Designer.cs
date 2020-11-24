@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCashFlowChart));
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cartesianChart1
@@ -44,27 +44,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cartesianChart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cartesianChart1.Location = new System.Drawing.Point(196, 49);
+            this.cartesianChart1.Location = new System.Drawing.Point(55, 91);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1391, 797);
+            this.cartesianChart1.Size = new System.Drawing.Size(1541, 657);
             this.cartesianChart1.TabIndex = 0;
             this.cartesianChart1.Text = "cartesianChart1";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 797);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(75, 49);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.Visible = false;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.button1.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.button1.Location = new System.Drawing.Point(196, 852);
+            this.button1.Location = new System.Drawing.Point(30, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 45);
             this.button1.TabIndex = 3;
@@ -93,22 +84,30 @@
             this.label1.TabIndex = 7;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(116, 797);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(210, 61);
+            this.panel2.TabIndex = 6;
+            // 
             // FormCashFlowChart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1716, 1015);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cartesianChart1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCashFlowChart";
+            this.Text = "Single Well Evaluation Tool";
             this.Load += new System.EventHandler(this.FormCashFlowChart_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -116,9 +115,9 @@
         #endregion
 
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

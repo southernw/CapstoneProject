@@ -3,27 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneProject", "CapstoneProject\CapstoneProject.csproj", "{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Single Well Evaluation Tool", "CapstoneProject\Single Well Evaluation Tool.csproj", "{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 		Single Well Evaluation Tool|Any CPU = Single Well Evaluation Tool|Any CPU
-		SWET|Any CPU = SWET|Any CPU
-		Well Evaluation Tool|Any CPU = Well Evaluation Tool|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Debug|Any CPU.ActiveCfg = Release|Any CPU
 		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Release|Any CPU.ActiveCfg = Single Well Evaluation Tool|Any CPU
+		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Release|Any CPU.Build.0 = Single Well Evaluation Tool|Any CPU
 		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Single Well Evaluation Tool|Any CPU.ActiveCfg = Single Well Evaluation Tool|Any CPU
 		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Single Well Evaluation Tool|Any CPU.Build.0 = Single Well Evaluation Tool|Any CPU
-		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.SWET|Any CPU.ActiveCfg = SWET|Any CPU
-		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.SWET|Any CPU.Build.0 = SWET|Any CPU
-		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Well Evaluation Tool|Any CPU.ActiveCfg = Well Evaluation Tool|Any CPU
-		{FD8E4CE4-63D6-4967-B027-1A3F6096FC9D}.Well Evaluation Tool|Any CPU.Build.0 = Well Evaluation Tool|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

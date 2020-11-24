@@ -50,38 +50,60 @@ namespace CapstoneProject
 
             d1.ColumnCount = 11;
             d1.Columns[0].Name = "Month";
+            d1.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[1].Name = "Gas_Rate";
+            d1.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[2].Name = "Gas_Price";
+            d1.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[3].Name = "Cum_MMCF";
+            d1.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[4].Name = "Oil_Rate";
+            d1.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[5].Name = "Oil_Price";
+            d1.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[6].Name = "Cum_Oil";
+            d1.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[7].Name = "LOE";
+            d1.Columns[7].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[8].Name = "Gross_Rev";
+            d1.Columns[8].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[9].Name = "Net_Rev";
+            d1.Columns[9].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             d1.Columns[10].Name = "Sum_NetRev";
+            d1.Columns[10].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             d1.Columns["Month"].HeaderText = "Month";
+
             d1.Columns["Gas_Rate"].HeaderText = "Gas Rate";
             d1.Columns["Gas_Rate"].DefaultCellStyle.Format = "N0";
+        
             d1.Columns["Gas_Price"].HeaderText = "Gas Price";
             d1.Columns["Gas_Price"].DefaultCellStyle.Format = "c";
+          
             d1.Columns["Cum_MMCF"].HeaderText = "Cummulative MMCF";
             d1.Columns["Cum_MMCF"].DefaultCellStyle.Format = "N0";
+         
             d1.Columns["Oil_Rate"].HeaderText = "Oil Rate";
             d1.Columns["Oil_Rate"].DefaultCellStyle.Format = "N0";
+           
             d1.Columns["Oil_Price"].HeaderText = "Oil Price";
             d1.Columns["Oil_Price"].DefaultCellStyle.Format = "c";
+           
             d1.Columns["Cum_Oil"].HeaderText = "Cummulative Oil";
             d1.Columns["Cum_Oil"].DefaultCellStyle.Format = "N0";
+     
             d1.Columns["LOE"].HeaderText = "Lease Operating Expense";
             d1.Columns["LOE"].DefaultCellStyle.Format = "c";
+          
             d1.Columns["Gross_Rev"].HeaderText = "Gross Revenue";
             d1.Columns["Gross_Rev"].DefaultCellStyle.Format = "c";
+           
             d1.Columns["Net_Rev"].HeaderText = "Net Revenue";
             d1.Columns["Net_Rev"].DefaultCellStyle.Format = "c";
+    
             d1.Columns["Sum_NetRev"].HeaderText = "Sum of Net Revenue";
             d1.Columns["Sum_NetRev"].DefaultCellStyle.Format = "c";
+            
 
         }
 

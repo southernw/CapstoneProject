@@ -50,6 +50,8 @@
             this.txtResRecov = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtWellName = new System.Windows.Forms.TextBox();
             this.lblRecRactor = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
             this.lblWaterSat = new System.Windows.Forms.Label();
@@ -65,70 +67,79 @@
             // 
             // txtThickness
             // 
-            this.txtThickness.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.txtThickness.Location = new System.Drawing.Point(40, 61);
+            this.txtThickness.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThickness.Location = new System.Drawing.Point(36, 131);
             this.txtThickness.Name = "txtThickness";
-            this.txtThickness.Size = new System.Drawing.Size(262, 30);
+            this.txtThickness.Size = new System.Drawing.Size(208, 30);
             this.txtThickness.TabIndex = 1;
             this.txtThickness.Text = "15";
             // 
             // txtPorosity
             // 
-            this.txtPorosity.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.txtPorosity.Location = new System.Drawing.Point(40, 121);
+            this.txtPorosity.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPorosity.Location = new System.Drawing.Point(36, 191);
             this.txtPorosity.Name = "txtPorosity";
-            this.txtPorosity.Size = new System.Drawing.Size(262, 30);
+            this.txtPorosity.Size = new System.Drawing.Size(208, 30);
             this.txtPorosity.TabIndex = 2;
             this.txtPorosity.Text = "20";
             // 
             // txtWaterSat
             // 
-            this.txtWaterSat.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.txtWaterSat.Location = new System.Drawing.Point(40, 186);
+            this.txtWaterSat.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWaterSat.Location = new System.Drawing.Point(36, 256);
             this.txtWaterSat.Name = "txtWaterSat";
-            this.txtWaterSat.Size = new System.Drawing.Size(262, 30);
+            this.txtWaterSat.Size = new System.Drawing.Size(208, 30);
             this.txtWaterSat.TabIndex = 3;
             this.txtWaterSat.Text = "45";
             // 
             // txtArea
             // 
-            this.txtArea.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.txtArea.Location = new System.Drawing.Point(40, 257);
+            this.txtArea.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArea.Location = new System.Drawing.Point(36, 327);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(262, 30);
+            this.txtArea.Size = new System.Drawing.Size(208, 30);
             this.txtArea.TabIndex = 4;
             this.txtArea.Text = "120";
             this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
             // 
             // txtRecFactor
             // 
-            this.txtRecFactor.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.txtRecFactor.Location = new System.Drawing.Point(40, 330);
+            this.txtRecFactor.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecFactor.Location = new System.Drawing.Point(36, 400);
             this.txtRecFactor.Name = "txtRecFactor";
-            this.txtRecFactor.Size = new System.Drawing.Size(262, 30);
+            this.txtRecFactor.Size = new System.Drawing.Size(208, 30);
             this.txtRecFactor.TabIndex = 5;
             this.txtRecFactor.Text = "35";
+            this.txtRecFactor.TextChanged += new System.EventHandler(this.txtRecFactor_TextChanged);
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(100, 39);
+            this.panel1.Location = new System.Drawing.Point(106, 56);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1249, 717);
+            this.panel1.Size = new System.Drawing.Size(1364, 780);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.AutoSize = true;
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.button2.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.button2.Location = new System.Drawing.Point(656, 582);
+            this.button2.Location = new System.Drawing.Point(692, 548);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 40);
+            this.button2.Size = new System.Drawing.Size(120, 32);
             this.button2.TabIndex = 14;
             this.button2.Text = "Save Results";
             this.button2.UseVisualStyleBackColor = false;
@@ -136,9 +147,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(237)))), ((int)(((byte)(226)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(177)))), ((int)(((byte)(124)))));
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -150,17 +163,21 @@
             this.groupBox2.Controls.Add(this.txtResBoAcrFt);
             this.groupBox2.Controls.Add(this.txtResRecov);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.groupBox2.Location = new System.Drawing.Point(656, 16);
+            this.groupBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(692, 60);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(574, 560);
+            this.groupBox2.Size = new System.Drawing.Size(351, 465);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results";
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(32, 300);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(238, 22);
@@ -169,7 +186,11 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(32, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 22);
@@ -178,7 +199,11 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(32, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(204, 22);
@@ -187,7 +212,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 22);
@@ -196,7 +225,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 22);
@@ -207,31 +240,33 @@
             // 
             this.txtResPorFeet.BackColor = System.Drawing.SystemColors.Window;
             this.txtResPorFeet.Enabled = false;
-            this.txtResPorFeet.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.txtResPorFeet.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResPorFeet.Location = new System.Drawing.Point(36, 61);
             this.txtResPorFeet.Name = "txtResPorFeet";
             this.txtResPorFeet.ReadOnly = true;
-            this.txtResPorFeet.Size = new System.Drawing.Size(262, 30);
+            this.txtResPorFeet.Size = new System.Drawing.Size(251, 30);
             this.txtResPorFeet.TabIndex = 7;
             // 
             // txtResBblAcre
             // 
             this.txtResBblAcre.BackColor = System.Drawing.SystemColors.Window;
             this.txtResBblAcre.Enabled = false;
+            this.txtResBblAcre.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResBblAcre.Location = new System.Drawing.Point(36, 121);
             this.txtResBblAcre.Name = "txtResBblAcre";
             this.txtResBblAcre.ReadOnly = true;
-            this.txtResBblAcre.Size = new System.Drawing.Size(262, 30);
+            this.txtResBblAcre.Size = new System.Drawing.Size(251, 30);
             this.txtResBblAcre.TabIndex = 8;
             // 
             // txtResBblOoip
             // 
             this.txtResBblOoip.BackColor = System.Drawing.SystemColors.Window;
             this.txtResBblOoip.Enabled = false;
+            this.txtResBblOoip.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResBblOoip.Location = new System.Drawing.Point(36, 186);
             this.txtResBblOoip.Name = "txtResBblOoip";
             this.txtResBblOoip.ReadOnly = true;
-            this.txtResBblOoip.Size = new System.Drawing.Size(262, 30);
+            this.txtResBblOoip.Size = new System.Drawing.Size(251, 30);
             this.txtResBblOoip.TabIndex = 9;
             // 
             // txtResBoAcrFt
@@ -239,29 +274,36 @@
             this.txtResBoAcrFt.BackColor = System.Drawing.SystemColors.Window;
             this.txtResBoAcrFt.Cursor = System.Windows.Forms.Cursors.No;
             this.txtResBoAcrFt.Enabled = false;
+            this.txtResBoAcrFt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResBoAcrFt.Location = new System.Drawing.Point(36, 327);
             this.txtResBoAcrFt.Name = "txtResBoAcrFt";
             this.txtResBoAcrFt.ReadOnly = true;
-            this.txtResBoAcrFt.Size = new System.Drawing.Size(262, 30);
+            this.txtResBoAcrFt.Size = new System.Drawing.Size(254, 30);
             this.txtResBoAcrFt.TabIndex = 11;
             // 
             // txtResRecov
             // 
             this.txtResRecov.BackColor = System.Drawing.SystemColors.Window;
             this.txtResRecov.Enabled = false;
+            this.txtResRecov.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResRecov.Location = new System.Drawing.Point(36, 257);
             this.txtResRecov.Name = "txtResRecov";
             this.txtResRecov.ReadOnly = true;
-            this.txtResRecov.Size = new System.Drawing.Size(262, 30);
+            this.txtResRecov.Size = new System.Drawing.Size(254, 30);
             this.txtResRecov.TabIndex = 10;
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.AutoSize = true;
+            this.btnClear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.btnClear.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.btnClear.Location = new System.Drawing.Point(164, 582);
+            this.btnClear.Location = new System.Drawing.Point(281, 586);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(137, 40);
+            this.btnClear.Size = new System.Drawing.Size(119, 32);
             this.btnClear.TabIndex = 13;
             this.btnClear.Text = "Clear Inputs";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -269,8 +311,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(237)))), ((int)(((byte)(226)))));
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(177)))), ((int)(((byte)(124)))));
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtWellName);
             this.groupBox1.Controls.Add(this.lblRecRactor);
             this.groupBox1.Controls.Add(this.lblArea);
             this.groupBox1.Controls.Add(this.lblWaterSat);
@@ -282,36 +326,73 @@
             this.groupBox1.Controls.Add(this.txtArea);
             this.groupBox1.Controls.Add(this.txtRecFactor);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.groupBox1.Location = new System.Drawing.Point(21, 16);
+            this.groupBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(281, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(574, 560);
+            this.groupBox1.Size = new System.Drawing.Size(329, 465);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inputs";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(32, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 22);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Well Name";
+            // 
+            // txtWellName
+            // 
+            this.txtWellName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWellName.Location = new System.Drawing.Point(36, 61);
+            this.txtWellName.Name = "txtWellName";
+            this.txtWellName.Size = new System.Drawing.Size(208, 30);
+            this.txtWellName.TabIndex = 11;
+            this.txtWellName.Text = "Spacek #1";
             // 
             // lblRecRactor
             // 
+            this.lblRecRactor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRecRactor.AutoSize = true;
-            this.lblRecRactor.Location = new System.Drawing.Point(37, 303);
+            this.lblRecRactor.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecRactor.Location = new System.Drawing.Point(33, 373);
             this.lblRecRactor.Name = "lblRecRactor";
             this.lblRecRactor.Size = new System.Drawing.Size(175, 22);
             this.lblRecRactor.TabIndex = 10;
             this.lblRecRactor.Text = "Recovery Factor (%)";
+            this.lblRecRactor.Click += new System.EventHandler(this.lblRecRactor_Click);
             // 
             // lblArea
             // 
+            this.lblArea.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(37, 230);
+            this.lblArea.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.Location = new System.Drawing.Point(33, 300);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(108, 22);
             this.lblArea.TabIndex = 9;
             this.lblArea.Text = "Area (acres)";
+            this.lblArea.Click += new System.EventHandler(this.lblArea_Click);
             // 
             // lblWaterSat
             // 
+            this.lblWaterSat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWaterSat.AutoSize = true;
-            this.lblWaterSat.Location = new System.Drawing.Point(36, 159);
+            this.lblWaterSat.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWaterSat.Location = new System.Drawing.Point(32, 229);
             this.lblWaterSat.Name = "lblWaterSat";
             this.lblWaterSat.Size = new System.Drawing.Size(182, 22);
             this.lblWaterSat.TabIndex = 8;
@@ -319,8 +400,12 @@
             // 
             // lblPorosity
             // 
+            this.lblPorosity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPorosity.AutoSize = true;
-            this.lblPorosity.Location = new System.Drawing.Point(37, 94);
+            this.lblPorosity.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPorosity.Location = new System.Drawing.Point(33, 164);
             this.lblPorosity.Name = "lblPorosity";
             this.lblPorosity.Size = new System.Drawing.Size(113, 22);
             this.lblPorosity.TabIndex = 7;
@@ -328,8 +413,12 @@
             // 
             // lblThickness
             // 
+            this.lblThickness.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblThickness.AutoSize = true;
-            this.lblThickness.Location = new System.Drawing.Point(36, 35);
+            this.lblThickness.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThickness.Location = new System.Drawing.Point(32, 105);
             this.lblThickness.Name = "lblThickness";
             this.lblThickness.Size = new System.Drawing.Size(120, 22);
             this.lblThickness.TabIndex = 6;
@@ -337,12 +426,16 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(157)))), ((int)(((byte)(163)))));
             this.button1.Font = new System.Drawing.Font("Cambria", 14.25F);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(21, 582);
+            this.button1.Location = new System.Drawing.Point(281, 548);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 40);
+            this.button1.Size = new System.Drawing.Size(119, 32);
             this.button1.TabIndex = 6;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = false;
@@ -354,16 +447,18 @@
             // 
             // FormOil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(237)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(1572, 845);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOil";
-            this.Text = "FormOil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Single Well Evaluation Tool";
             this.Load += new System.EventHandler(this.FormOil_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -401,5 +496,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtWellName;
     }
 }

@@ -27,6 +27,8 @@ namespace CapstoneProject
         public DataGridView MyDgv;
         //public string wellName;
         public string w;
+
+
         public FormCashFlowChart(DataGridView dgv, string wellName)
         {
 
@@ -101,6 +103,7 @@ namespace CapstoneProject
                 MinValue = 0,
                 MaxValue = getMonths(),
                 FontWeight = FontWeights.Bold,
+                Foreground = System.Windows.Media.Brushes.Black,
                 FontSize = 16,
                 Opacity = 0.6
                 //Labels = new[] { 0, "20", "40", "60", "May" }
@@ -114,6 +117,7 @@ namespace CapstoneProject
                 MinValue = 0,
                 MaxValue = 100000,
                 FontWeight = FontWeights.Bold,
+                Foreground = System.Windows.Media.Brushes.Black,
                 FontSize = 16,
                 Opacity = 0.6
             });
@@ -121,13 +125,13 @@ namespace CapstoneProject
             cartesianChart1.AxisY.Add(new Axis
             {
                 //Title = "MCFG/Month",
-                LabelFormatter = value => value.ToString("C"),
+                LabelFormatter = value => value.ToString("N0"),
                 MinValue = 0,
                 MaxValue = 3500000,
                 Foreground = System.Windows.Media.Brushes.IndianRed,
                 Position = AxisPosition.RightTop,
                 FontWeight = FontWeights.Bold,
-                FontSize = 16,
+                FontSize = 18,
                 Opacity = 0.6
             });
             cartesianChart1.AxisY.Add(new Axis
@@ -139,7 +143,7 @@ namespace CapstoneProject
                 Foreground = System.Windows.Media.Brushes.IndianRed,
                 //Position = AxisPosition.RightTop,
                 FontWeight = FontWeights.Bold,
-                FontSize = 16,
+                FontSize = 18,
                 ShowLabels = false,
                 Opacity = 0.0
             });
@@ -159,7 +163,7 @@ namespace CapstoneProject
            // });
 
             //modifying any series values will also animate and update the chart
-            //cartesianChart1.Series[1].Values.Add(5d);
+           // cartesianChart1.Series[1].Values.Add(5d);
 
 
             cartesianChart1.DataClick += CartesianChart1OnDataClick;
@@ -179,8 +183,10 @@ namespace CapstoneProject
             System.Windows.MessageBox.Show("You clicked (" + chartPoint.X + "," + chartPoint.Y + ")");
         }
        
+    
         private void FormCashFlowChart_Load(object sender, EventArgs e)
         {
+           
            
             CashFlow cash = new CashFlow();
             

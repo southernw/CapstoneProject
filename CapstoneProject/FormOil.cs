@@ -21,7 +21,7 @@ namespace CapstoneProject
 
         private void FormOil_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,7 +37,6 @@ namespace CapstoneProject
 
                         errorProvider1.SetError(txtBox, "Field can not be empty");
                         txtBox.Focus();
-
                     }
                     else
                         errorProvider1.SetError(txtBox, "");
@@ -115,17 +114,26 @@ namespace CapstoneProject
                 saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 saveFileDialog1.Title = "Save Results";
                 saveFileDialog1.RestoreDirectory = true;
-
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                saveFileDialog1.FileName = txtWellName.Text.ToString();
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                        string test = "Porosity Feet: " + txtResPorFeet.Text.ToString() + "\n" +
+                        string test = "Well name: " + txtWellName.Text.ToString() + "\n\n" +
+                                       "Inputs: \n" +
+                                       "Thickness (ft): " + txtThickness.Text.ToString() + "\n" +
+                                      "Porosity (%): " + txtPorosity.Text.ToString() + "\n" +
+                                      "Water Saturation (%): " + txtWaterSat.Text.ToString() + "\n" +
+                                      "Area (acres): " + txtArea.Text.ToString() + "\n" +
+                                      "Recovery Factor (%): " + txtRecFactor.Text.ToString() + "\n\n" +
+                                      "Results: \n" + 
+                                      "Porosity Feet: " + txtResPorFeet.Text.ToString() + "\n" +
                                       "Bbl Per Acre: " + txtResBblAcre.Text.ToString() + "\n" +
                                       "Bbl Original Oil in Place: " + txtResBblOoip.Text.ToString() + "\n" +
                                       "Bbl Recoverable: " + txtResRecov.Text.ToString() + "\n" +
                                       "Barrels/Acre Ft. Equivalent: " + txtResBoAcrFt.Text.ToString();
 
-                    string fileName = saveFileDialog1.FileName;
-                    File.WriteAllText(fileName, test);
+                        
+
+                        File.WriteAllText(saveFileDialog1.FileName, test);
                     
                 }
             }
@@ -146,6 +154,26 @@ namespace CapstoneProject
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblRecRactor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblArea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRecFactor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

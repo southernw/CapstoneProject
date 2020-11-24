@@ -14,9 +14,13 @@ namespace CapstoneProject
 {
     public partial class FormGas : Form
     {
+        public new System.Windows.Forms.AutoScaleMode AutoScaleMode { get; set; }
         public FormGas()
         {
             InitializeComponent();
+            
+
+           
         }
 
 
@@ -113,6 +117,7 @@ namespace CapstoneProject
                     }
                 }
             }
+          
         }
         private void txtBHP_Validating(object sender, CancelEventArgs e)
         {
@@ -142,19 +147,27 @@ namespace CapstoneProject
                     saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                     saveFileDialog1.Title = "Save Results";
                     saveFileDialog1.RestoreDirectory = true;
-
+                    saveFileDialog1.FileName = txtWellName.Text.ToString();
                     if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                     {
-                        string test = "Per Well BO: " + txtResPerBO.Text.ToString() + "\n" +
-                                      "Per Well MMCF : " + txtResPerMMCF.Text.ToString() + "\n" +
-                                      "Total Reserve BO: " + txtTtlResBO.Text.ToString() + "\n" +
-                                      "Total Reserve MMCF " + txtTtlResMMCF.Text.ToString() + "\n" +
-                                      "Porosity Feet: " + txtPorFeet.Text.ToString() + "\n" +
-                                      "Mud Weight Estimated: " + txtMWE.Text.ToString() + "\n" +
-                                      "MMCF/Por Ft: " + txtMMCF_PortFt.Text.ToString();
+                        string test =  "Well name: " + txtWellName.Text.ToString() + "\n\n" +
+                                       "Inputs: \n" +
+                                       "Bottom Hole Pressure (PSI): " + txtBHP.Text.ToString() + "\n" +
+                                       "Salt Water Saturation (%): " + txtSW.Text.ToString() + "\n" +
+                                       "Area (acres): " + txtAcres.Text.ToString() + "\n" +
+                                       "Recovery Factor (%): " + txtRecFactor.Text.ToString() + "\n" +
+                                       "Net Height (ft): " + txtNetH.Text.ToString() + "\n\n" +
+                                       "Results: \n" +
+                                       "Per Well BO: " + txtResPerBO.Text.ToString() + "\n" +
+                                       "Per Well MMCF : " + txtResPerMMCF.Text.ToString() + "\n" +
+                                       "Total Reserve BO: " + txtTtlResBO.Text.ToString() + "\n" +
+                                       "Total Reserve MMCF " + txtTtlResMMCF.Text.ToString() + "\n" +
+                                       "Porosity Feet: " + txtPorFeet.Text.ToString() + "\n" +
+                                       "Mud Weight Estimated: " + txtMWE.Text.ToString() + "\n" +
+                                       "MMCF/Por Ft: " + txtMMCF_PortFt.Text.ToString();
 
-                        string fileName = saveFileDialog1.FileName;
-                        File.WriteAllText(fileName, test);
+                        
+                        File.WriteAllText(saveFileDialog1.FileName, test);
 
                     }
                 }
@@ -175,8 +188,10 @@ namespace CapstoneProject
 
         }
 
+      
         private void FormGas_Load(object sender, EventArgs e)
         {
+           
 
         }
 

@@ -26,7 +26,6 @@ namespace CapstoneProject
 
         }
 
-        
         private void FormCashFlow_Load(object sender, EventArgs e)
         {
             button2.Enabled = false;
@@ -35,9 +34,9 @@ namespace CapstoneProject
             cash.modf(dataGridView1);
 
             // this.MinimumSize = new Size(800, 600);
-            this.MinimumSize = Screen.PrimaryScreen.Bounds.Size;
-            this.WindowState = FormWindowState.Maximized;
-            this.SizeGripStyle = SizeGripStyle.Hide;
+           // this.MinimumSize = Screen.PrimaryScreen.Bounds.Size;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.SizeGripStyle = SizeGripStyle.Hide;
 
             txtGasEscl.MouseHover += TextBox_MouseHover;
             txtNRI.MouseHover += TextBox_MouseHover;
@@ -277,6 +276,16 @@ namespace CapstoneProject
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

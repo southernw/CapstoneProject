@@ -20,25 +20,38 @@ namespace CapstoneProject
         private Form currentChildForm;
         
 
+        
 
         public MainForm()
         {
+            
             InitializeComponent();
-            this.MinimumSize = new Size(1650, 800);
+            
+          
+
+            //this.MaximizedBounds = Screen.FromHandle(Handle).WorkingArea; //Fix window full screen resize
+            //this.WindowState = FormWindowState.Normal;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+            //this.StartPosition = FormStartPosition.Manual;
+            // this.Top = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
+            // this.Left = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
+            //this.MinimumSize = new Size(1650, 800);
             //this.MaximumSize = new Size(1650, 800);
             leftBoderButton = new Panel();
             //leftBoderButton.Size = new Size(10, 60);
             panelMenu.Controls.Add(leftBoderButton);
 
             this.Text = String.Empty;
-            this.ControlBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+           // this.ControlBox = true;
+            //this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            //this.MinimizeBox = false;
+            //this.MaximizeBox = false;
             this.DoubleBuffered = true ;
-            this.MaximizedBounds = Screen.FromHandle(Handle).WorkingArea; //Fix window full screen resize
-            //this.WindowState = FormWindowState.Normal;
-            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = true;
             label1.Text = "Welcome to the Single Well Evaluation Tool \n" +
-                "*To get started, choose an option from the menu";
+                          "To get started, choose an option from the menu";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+           
 
             Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
             this.btnHome.ForeColor = Color.Gray;
@@ -83,11 +96,12 @@ namespace CapstoneProject
         {
             Color color = System.Drawing.ColorTranslator.FromHtml("#f9f6f1");
             FormCashFlow cashFlow = new FormCashFlow();
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             this.btnCashFlow.ForeColor = Color.Gray;
             this.btnHome.ForeColor = color;
             this.btnOil.ForeColor = color;
             this.btnGas.ForeColor = color;
+           // cashFlow.Show();
             OpenChildForm(cashFlow);
             
 
@@ -100,8 +114,9 @@ namespace CapstoneProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(1585, 888);
-           
+           // this.Size = new System.Drawing.Size(1650, 800);
+
+
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
@@ -111,13 +126,14 @@ namespace CapstoneProject
 
  
 
+        /*
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
        
-        private void panelMain_MouseMove(object sender, MouseEventArgs e)
+        private void panelMain_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -125,7 +141,7 @@ namespace CapstoneProject
                 SendMessage(Handle, 0xA1, 0x2, 0);
             }
         }
-
+        */
         private void OpenChildForm(Form childForm)
         {
             if (currentChildForm != null)
@@ -144,7 +160,6 @@ namespace CapstoneProject
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-
             const string message =
         "Are you sure that you would like to exit the program?";
             const string caption = "Exit?";
@@ -158,7 +173,7 @@ namespace CapstoneProject
             }
             
         }
-
+        
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
