@@ -426,7 +426,7 @@
             this.txtAvgPor.Name = "txtAvgPor";
             this.txtAvgPor.Size = new System.Drawing.Size(178, 30);
             this.txtAvgPor.TabIndex = 12;
-            this.txtAvgPor.Text = "0.18";
+            this.txtAvgPor.Text = "18";
             // 
             // lblAvgPoros
             // 
@@ -507,7 +507,7 @@
             this.txtSW.Name = "txtSW";
             this.txtSW.Size = new System.Drawing.Size(172, 30);
             this.txtSW.TabIndex = 2;
-            this.txtSW.Text = "0.35";
+            this.txtSW.Text = "35";
             // 
             // txtAcres
             // 
@@ -525,7 +525,7 @@
             this.txtRecFactor.Name = "txtRecFactor";
             this.txtRecFactor.Size = new System.Drawing.Size(172, 30);
             this.txtRecFactor.TabIndex = 4;
-            this.txtRecFactor.Text = "0.80";
+            this.txtRecFactor.Text = "80";
             // 
             // txtNetH
             // 

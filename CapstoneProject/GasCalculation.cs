@@ -43,7 +43,8 @@ namespace CapstoneProject
         public double calcPorFeet(double netH, double avgPorosity)
         {
             double porFeet = 0.0;
-            porFeet = (netH * avgPorosity);
+            double percAP = avgPorosity / 100;
+            porFeet = (netH * percAP);
             return porFeet;
         }
 
@@ -62,10 +63,11 @@ namespace CapstoneProject
         public double calcMMCF_PORFT(double acres, double sw, double bhp, double recFactor)
         {
             // acres *43560*(1-water saturation)*(BHP/15)*Recovery Factor/1000000
+
             double sqftAcre = acres * ACRE;
-            double swOne = (1 - sw);
+            double swOne = (100 - sw);
             double bhpFif = (bhp / 15);
-            double recFacOne = (recFactor / 1000000);
+            double recFacOne = ((recFactor / 100) / 100000000);
 
             double MMCF_PORFT = sqftAcre * swOne * bhpFif * recFacOne;
             return MMCF_PORFT;

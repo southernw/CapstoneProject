@@ -68,9 +68,9 @@ namespace CapstoneProject
                 double MMCF_PorFt = gas.calcMMCF_PORFT(double.Parse(txtAcres.Text), double.Parse(txtSW.Text), double.Parse(txtBHP.Text), double.Parse(txtRecFactor.Text));
 
               
-                txtMMCF_PortFt.Text = MMCF_PorFt.ToString("N0");
-                txtPorFeet.Text = porFeet.ToString("N0");
-                txtMWE.Text = MWE.ToString("N0");
+                txtMMCF_PortFt.Text = MMCF_PorFt.ToString("F");
+                txtPorFeet.Text = porFeet.ToString("F");
+                txtMWE.Text = MWE.ToString("F");
 
 
                 // per well

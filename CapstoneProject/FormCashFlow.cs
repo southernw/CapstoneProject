@@ -99,19 +99,19 @@ namespace CapstoneProject
                     double OIL_PRICE = double.Parse(txtOilPrice.Text);
                     double OIL_ESCL = double.Parse(txtOilEscalation.Text);
 
-                if (GasEscl < 0 || GasEscl > 1 || LOEescl < 0 || LOEescl > 1 || NRI < 0 || NRI > 1 || OIL_ESCL < 0 || OIL_ESCL > 1)
+                if (GasEscl < 0 || GasEscl > 100 || LOEescl < 0 || LOEescl > 100 || NRI < 0 || NRI > 100 || OIL_ESCL < 0 || OIL_ESCL > 100)
                 {
                     if(GasEscl < 0 || GasEscl > 1)
-                        errorProvider1.SetError(txtGasEscl, "Field can not be greater than 1 or less than 0");
+                        errorProvider1.SetError(txtGasEscl, "Field can not be greater than 100 or less than 0");
 
                     if (LOEescl < 0 || LOEescl > 1)
-                        errorProvider1.SetError(txtLOEEscl, "Field can not be greater than 1 or less than 0");
+                        errorProvider1.SetError(txtLOEEscl, "Field can not be greater than 100 or less than 0");
 
                     if (NRI < 0 || NRI > 1)
-                        errorProvider1.SetError(txtNRI, "Field can not be greater than 1 or less than 0");
+                        errorProvider1.SetError(txtNRI, "Field can not be greater than 100 or less than 0");
 
                     if (OIL_ESCL < 0 || OIL_ESCL > 1)
-                        errorProvider1.SetError(txtOilEscalation, "Field can not be greater than 1 or less than 0");
+                        errorProvider1.SetError(txtOilEscalation, "Field can not be greater than 100 or less than 0");
 
                     return;
                 }

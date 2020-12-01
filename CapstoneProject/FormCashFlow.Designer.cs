@@ -161,7 +161,7 @@ namespace CapstoneProject
             this.txtNRI.Name = "txtNRI";
             this.txtNRI.Size = new System.Drawing.Size(170, 30);
             this.txtNRI.TabIndex = 12;
-            this.txtNRI.Text = "0.0925";
+            this.txtNRI.Text = "9.25";
             this.txtNRI.TextChanged += new System.EventHandler(this.txtNRI_TextChanged);
             this.txtNRI.Leave += new System.EventHandler(this.txtNRI_Leave);
             this.txtNRI.MouseHover += new System.EventHandler(this.TextBox_MouseHover);
@@ -172,7 +172,7 @@ namespace CapstoneProject
             this.txtLOEEscl.Name = "txtLOEEscl";
             this.txtLOEEscl.Size = new System.Drawing.Size(165, 30);
             this.txtLOEEscl.TabIndex = 13;
-            this.txtLOEEscl.Text = "0.04";
+            this.txtLOEEscl.Text = "4.00";
             this.txtLOEEscl.TextChanged += new System.EventHandler(this.txtLOEEscl_TextChanged);
             this.txtLOEEscl.Leave += new System.EventHandler(this.txtLOEEscl_Leave);
             this.txtLOEEscl.MouseHover += new System.EventHandler(this.TextBox_MouseHover);
@@ -199,7 +199,7 @@ namespace CapstoneProject
             this.txtGasEscl.Name = "txtGasEscl";
             this.txtGasEscl.Size = new System.Drawing.Size(162, 30);
             this.txtGasEscl.TabIndex = 9;
-            this.txtGasEscl.Text = "0.05";
+            this.txtGasEscl.Text = "5.00";
             this.txtGasEscl.TextChanged += new System.EventHandler(this.txtGasEscl_TextChanged);
             this.txtGasEscl.Leave += new System.EventHandler(this.txtGasEscl_Leave);
             this.txtGasEscl.MouseHover += new System.EventHandler(this.TextBox_MouseHover);
@@ -226,7 +226,7 @@ namespace CapstoneProject
             this.txtOilEscalation.Name = "txtOilEscalation";
             this.txtOilEscalation.Size = new System.Drawing.Size(170, 30);
             this.txtOilEscalation.TabIndex = 16;
-            this.txtOilEscalation.Text = "0.04";
+            this.txtOilEscalation.Text = "4.00";
             this.txtOilEscalation.TextChanged += new System.EventHandler(this.txtOilEscl_TextChanged);
             this.txtOilEscalation.Leave += new System.EventHandler(this.txtOilEscl_Leave);
             this.txtOilEscalation.MouseHover += new System.EventHandler(this.TextBox_MouseHover);
@@ -281,11 +281,11 @@ namespace CapstoneProject
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.label5.Location = new System.Drawing.Point(54, 344);
+            this.label5.Location = new System.Drawing.Point(24, 344);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 22);
+            this.label5.Size = new System.Drawing.Size(160, 22);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Gas Escalation";
+            this.label5.Text = "Gas Escalation (%)";
             // 
             // label6
             // 
@@ -301,21 +301,21 @@ namespace CapstoneProject
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.label7.Location = new System.Drawing.Point(60, 498);
+            this.label7.Location = new System.Drawing.Point(30, 498);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 22);
+            this.label7.Size = new System.Drawing.Size(164, 22);
             this.label7.TabIndex = 22;
-            this.label7.Text = "LOE Escalation";
+            this.label7.Text = "LOE Escalation (%)";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.label9.Location = new System.Drawing.Point(15, 568);
+            this.label9.Location = new System.Drawing.Point(113, 568);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(180, 22);
+            this.label9.Size = new System.Drawing.Size(76, 22);
             this.label9.TabIndex = 24;
-            this.label9.Text = "Net Revenue Interest";
+            this.label9.Text = "NRI (%)";
             // 
             // label10
             // 
@@ -341,11 +341,11 @@ namespace CapstoneProject
             // 
             this.txtOilEscl.AutoSize = true;
             this.txtOilEscl.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.txtOilEscl.Location = new System.Drawing.Point(71, 792);
+            this.txtOilEscl.Location = new System.Drawing.Point(38, 792);
             this.txtOilEscl.Name = "txtOilEscl";
-            this.txtOilEscl.Size = new System.Drawing.Size(118, 22);
+            this.txtOilEscl.Size = new System.Drawing.Size(153, 22);
             this.txtOilEscl.TabIndex = 27;
-            this.txtOilEscl.Text = "Oil Escalation";
+            this.txtOilEscl.Text = "Oil Escalation (%)";
             // 
             // txtMonths
             // 
@@ -474,7 +474,7 @@ namespace CapstoneProject
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(237)))), ((int)(((byte)(226)))));
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

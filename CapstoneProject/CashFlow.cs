@@ -147,7 +147,7 @@ namespace CapstoneProject
             //d1.Rows.Add();
             for (int i = 1; i < month; i++)
             {
-                gasPrice[i] = gasPrice[i - 1] + gasPrice[i - 1] * GAS_ESCL / 12;
+                gasPrice[i] = gasPrice[i - 1] + gasPrice[i - 1] * (GAS_ESCL / 100) / 12;
                 d1.Rows[0].Cells["Gas_Price"].Value = gasPrice[0];
                 d1.Rows[i].Cells["Gas_Price"].Value = gasPrice[i];
             }
@@ -204,7 +204,7 @@ namespace CapstoneProject
             {
                 num = (double)d1.Rows[i - 1].Cells["Oil_Price"].Value;
 
-                num2 = num + num * OIL_ESCL / 12;
+                num2 = num + num * (OIL_ESCL / 100) / 12;
 
                 d1.Rows[i].Cells["Oil_Price"].Value = num2;
             }
@@ -243,7 +243,7 @@ namespace CapstoneProject
             {
                 num = (double)d1.Rows[i - 1].Cells["LOE"].Value;
 
-                num2 = num + num * LOE_ESCL / 12;
+                num2 = num + num * (LOE_ESCL / 100) / 12;
 
                 d1.Rows[i].Cells["LOE"].Value = num2;
             }
@@ -294,7 +294,7 @@ namespace CapstoneProject
             for  (int i = 1; i <= month; i++)
             {
                 gRev = (double)d1.Rows[i - 1].Cells["Gross_Rev"].Value;
-                num = gRev * NRI;
+                num = gRev * (NRI / 100);
 
                 d1.Rows[i - 1].Cells["Net_Rev"].Value = num;
             }

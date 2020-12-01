@@ -55,7 +55,7 @@ namespace CapstoneProject
                     
                     double porFeet = oil.calcPorFeet(double.Parse(txtThickness.Text), double.Parse(txtPorosity.Text));
 
-                txtResPorFeet.Text = porFeet.ToString("N0");
+                txtResPorFeet.Text = porFeet.ToString("F");
 
                 double bblPerAcre = oil.calcBblPerAcre(porFeet, double.Parse(txtWaterSat.Text));
                 txtResBblAcre.Text = bblPerAcre.ToString("N0");

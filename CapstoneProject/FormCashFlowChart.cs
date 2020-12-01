@@ -112,10 +112,10 @@ namespace CapstoneProject
             cartesianChart1.AxisY.Add(new Axis
             {
                 
-                Title = "MCFG/Month",
+                Title = "Gas Rate",
                 LabelFormatter = value => value.ToString("N0"),
                 MinValue = 0,
-                MaxValue = 100000,
+                MaxValue = getAPARAM(),
                 FontWeight = FontWeights.Bold,
                 Foreground = System.Windows.Media.Brushes.Black,
                 FontSize = 16,
@@ -124,22 +124,22 @@ namespace CapstoneProject
 
             cartesianChart1.AxisY.Add(new Axis
             {
-                //Title = "MCFG/Month",
+                Title = "$ / Cum Gas",
                 LabelFormatter = value => value.ToString("N0"),
                 MinValue = 0,
-                MaxValue = 3500000,
+                MaxValue = getMMCF(),
                 Foreground = System.Windows.Media.Brushes.IndianRed,
                 Position = AxisPosition.RightTop,
                 FontWeight = FontWeights.Bold,
                 FontSize = 18,
                 Opacity = 0.6
-            });
+            }) ;
             cartesianChart1.AxisY.Add(new Axis
             {
                 LabelFormatter = value => value.ToString("N0"),
-                //Title = "MCFG/Month",
+                //Title = "Cum Gas",
                 MinValue = 0,
-                MaxValue = 3500000,
+                MaxValue = getMMCF(),
                 Foreground = System.Windows.Media.Brushes.IndianRed,
                 //Position = AxisPosition.RightTop,
                 FontWeight = FontWeights.Bold,
@@ -150,7 +150,7 @@ namespace CapstoneProject
 
 
 
-            cartesianChart1.LegendLocation = LegendLocation.Right;
+            cartesianChart1.LegendLocation = LegendLocation.Bottom;
 
             //modifying the series collection will animate and update the chart
             //cartesianChart1.Series.Add(new LineSeries
@@ -177,6 +177,18 @@ namespace CapstoneProject
         {
             double monthss = (int)MyDgv.Rows[MyDgv.RowCount - 1].Cells[0].Value;
             return monthss;
+        }
+
+        public double getAPARAM()
+        {
+            double APARAM = (double)MyDgv.Rows[0].Cells[1].Value;
+            return APARAM;
+        }
+
+        public double getMMCF()
+        {
+            double MMCF = (double)MyDgv.Rows[MyDgv.RowCount - 1].Cells[3].Value;
+            return MMCF;
         }
         private void CartesianChart1OnDataClick(object sender, ChartPoint chartPoint)
         {
